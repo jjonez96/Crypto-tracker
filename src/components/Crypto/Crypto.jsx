@@ -36,47 +36,49 @@ const Crypto = () => {
   }, []);
 
   return (
-    <Container>
+    <>
       <NavBar search={search} setSearch={setSearch} />
-      <BackToTop />
+      <Container>
+        <BackToTop />
 
-      {crypto
-        .filter((cryptos) => {
-          return (
-            cryptos.name.toLowerCase().includes(search.toLowerCase()) ||
-            cryptos.symbol.toLowerCase().includes(search.toLowerCase())
-          );
-        })
-        .map((cryptos, i) => (
-          <div className="center" key={i}>
-            <H2>{cryptos.name}</H2>
-            <a href={cryptos.websiteUrl}>
-              <img src={cryptos.icon} alt="logo" width="40px" />
-            </a>
-            <br />
-            <br />
-            <Symbol>{cryptos.symbol}</Symbol>
-            <br />
-            <br />
-            <B>Price:</B> ${cryptos.price.toFixed(4)}
-            <br />
-            <B> Market Cap:</B> ${cryptos.marketCap.toLocaleString()}
-            {cryptos.priceChange1d < 0 ? (
-              <Red>
-                <B>24H Change: </B>
-                {cryptos.priceChange1d}%
-              </Red>
-            ) : (
-              <Green>
-                <B>24H Change: </B>
-                {cryptos.priceChange1d}%
-              </Green>
-            )}
-            <Button>Follow</Button>
-            <HR />
-          </div>
-        ))}
-    </Container>
+        {crypto
+          .filter((cryptos) => {
+            return (
+              cryptos.name.toLowerCase().includes(search.toLowerCase()) ||
+              cryptos.symbol.toLowerCase().includes(search.toLowerCase())
+            );
+          })
+          .map((cryptos, i) => (
+            <div className="center" key={i}>
+              <H2>{cryptos.name}</H2>
+              <a href={cryptos.websiteUrl}>
+                <img src={cryptos.icon} alt="logo" width="40px" />
+              </a>
+              <br />
+              <br />
+              <Symbol>{cryptos.symbol}</Symbol>
+              <br />
+              <br />
+              <B>Price:</B> ${cryptos.price.toFixed(4)}
+              <br />
+              <B> Market Cap:</B> ${cryptos.marketCap.toLocaleString()}
+              {cryptos.priceChange1d < 0 ? (
+                <Red>
+                  <B>24H Change: </B>
+                  {cryptos.priceChange1d}%
+                </Red>
+              ) : (
+                <Green>
+                  <B>24H Change: </B>
+                  {cryptos.priceChange1d}%
+                </Green>
+              )}
+              <Button>Follow</Button>
+              <HR />
+            </div>
+          ))}
+      </Container>
+    </>
   );
 };
 

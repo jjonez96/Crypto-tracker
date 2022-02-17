@@ -32,6 +32,12 @@ export const NavbarContainer = styled.div`
   max-width: 1530px;
 `;
 export const Input = styled.input`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  margin: 25px;
+  width: 100%;
   font-size: medium;
   color: #ecdbba;
   overflow: hidden;

@@ -36,7 +36,7 @@ const NavBar = (props) => {
       <IconContext.Provider value={{ color: "#ecdbba" }}>
         <Nav active={scroll} click={click}>
           <NavbarContainer>
-            <NavLogo to="/">EXPLORE</NavLogo>
+            <NavLogo to="/">Crypto</NavLogo>
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
