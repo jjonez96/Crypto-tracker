@@ -2,8 +2,9 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
-  background: transparent;
-  height: 60px;
+  background: ${({ active }) => (active ? "#000" : "#transparent")};
+  transition: 0.8s all ease;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,8 +12,9 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 999;
+  box-shadow: 0 0 10px #ecdbba;
   scroll-behavior: smooth;
-  transition: 0.8s all ease;
+
   @media screen and (max-width: 960px) {
     position: sticky;
     top: 0;
@@ -29,7 +31,7 @@ export const NavbarContainer = styled.div`
   height: 80px;
   z-index: 1;
   width: 100%;
-  max-width: 1530px;
+  max-width: 1700px;
 `;
 export const Input = styled.input`
   display: flex;
@@ -43,18 +45,22 @@ export const Input = styled.input`
   overflow: hidden;
   background-color: transparent;
   border: 1px solid #ecdbba;
-
   border-radius: 7px;
-
+  @media screen and (max-width: 960px) {
+    width: 45%;
+    position: absolute;
+    right: 43px;
+    text-align: center;
+  }
   &:hover {
     background: transparent;
     transition-duration: 0.4s;
-    box-shadow: 0 0 15px #ecdbba;
+    box-shadow: 0 0 5px #ecdbba;
   }
   &:focus {
     outline: none !important;
     border: 1px solid #ecdbba;
-    box-shadow: 0 0 10px #ecdbba;
+    box-shadow: 0 0 5px #ecdbba;
   }
 `;
 export const NavLogo = styled(Link)`
@@ -76,8 +82,8 @@ export const NavLogo = styled(Link)`
   display: flex;
   align-items: center;
   &:hover {
-    color: #ff4040;
-    transition: all 0.3 ease;
+    transition-duration: 0.4s;
+    text-shadow: 0 0 8px #ecdbba;
   }
 `;
 
@@ -142,8 +148,8 @@ export const NavLinks = styled(Link)`
   padding: 2.4rem 2rem;
   width: 100%;
   &:hover {
-    color: #ff4040;
-    transition: all 0.3 ease;
+    transition-duration: 0.4s;
+    text-shadow: 0 0 8px #ecdbba;
   }
   @media screen and (max-width: 960px) {
     color: linear-gradient(
@@ -159,8 +165,8 @@ export const NavLinks = styled(Link)`
     width: 100%;
     display: table;
     &:hover {
-      color: #ff4040;
-      transition: all 0.3 ease;
+      transition-duration: 0.4s;
+      text-shadow: 0 0 8px #ecdbba;
     }
   }
 `;

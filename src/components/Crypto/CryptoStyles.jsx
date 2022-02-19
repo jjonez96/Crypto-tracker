@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  position: relative;
-  top: 40px;
   text-align: center;
   color: #ecdbba;
 `;
 
 export const Button = styled.button`
-  font-size: large;
+  font-size: 20px;
   color: #ecdbba;
   overflow: hidden;
   background-image: linear-gradient(
@@ -22,22 +20,22 @@ export const Button = styled.button`
   border-radius: 7px;
   position: relative;
   bottom: 20px;
-
   cursor: pointer;
 
   &:hover {
     transition-duration: 0.4s;
-    box-shadow: 0 0 15px #ecdbba;
+    box-shadow: 0 0 8px #ecdbba;
   }
   &:focus {
     outline: none !important;
     border: 1px solid #ecdbba;
-    box-shadow: 0 0 10px #ecdbba;
+    box-shadow: 0 0 8px #ecdbba;
   }
 `;
 
 export const H2 = styled.h2`
   position: relative;
+  color: #ecdbba;
   top: 10px;
 `;
 
@@ -45,13 +43,11 @@ export const B = styled.b`
   color: #c84b31;
 `;
 export const HR = styled.hr`
-  position: relative;
-  bottom: 16px;
   border: none;
   height: 0.5px;
   background-color: #ecdbba;
   box-shadow: 0 0 15px #ecdbba;
-  width: 30%;
+  width: 35%;
 `;
 export const Symbol = styled.b`
   color: #ecdbba;
@@ -67,6 +63,12 @@ export const Green = styled.p`
   position: relative;
   bottom: 15px;
   color: #11d811;
+`;
+export const Table = styled.table`
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 `;
 
 export const Backtotop = styled.button`
@@ -86,7 +88,7 @@ export const Backtotop = styled.button`
   border-radius: 5px;
   border: 1px solid #ecdbba;
   &:hover {
-    box-shadow: 0 0 15px #ecdbba;
+    box-shadow: 0 0 10px #ecdbba;
     transition-duration: 0.4s;
   }
 `;

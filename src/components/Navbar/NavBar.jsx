@@ -43,11 +43,17 @@ const NavBar = (props) => {
             <Input
               value={props.value}
               onChange={(event) => props.setSearch(event.target.value)}
-              placeholder="Type to search..."
+              placeholder="Search cryptos..."
             ></Input>
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
                 <NavLinks to="/">Cryptos</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/News">News</NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/FavList">Favourites</NavLinks>
               </NavItem>
               <NavItem>
                 <NavLinks to="/Kynnet">Login</NavLinks>
