@@ -6,8 +6,10 @@ import BackToTop from "./BackToTop";
 const News = () => {
   const [news, setNews] = useState([]);
   const [search, setSearch] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch("https://crypto-news-live3.p.rapidapi.com/news", {
       method: "GET",
       headers: {
@@ -21,6 +23,7 @@ const News = () => {
           return;
         }
         response.json().then((news) => {
+          setIsLoading(false);
           setNews(news);
         });
       })
@@ -37,8 +40,8 @@ const News = () => {
   return (
     <>
       <NavBar search={search} setSearch={setSearch} />
-
       <Container>
+        {isLoading && <p>Loading...</p>}
         {filterNews.map((news, i) => (
           <div className="center" key={i}>
             <H2>{news.title}</H2>

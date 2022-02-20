@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
-  background: ${({ active }) => (active ? "#000" : "#transparent")};
+  background: ${({ active }) => (active ? "#000" : "transparent")};
   transition: 0.8s all ease;
   height: 70px;
   display: flex;
@@ -12,7 +12,6 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 999;
-  box-shadow: 0 0 10px #ecdbba;
   scroll-behavior: smooth;
 
   @media screen and (max-width: 960px) {
@@ -31,36 +30,46 @@ export const NavbarContainer = styled.div`
   height: 80px;
   z-index: 1;
   width: 100%;
-  max-width: 1700px;
+  max-width: 1900px;
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
 `;
+
 export const Input = styled.input`
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 30px;
-  margin: 25px;
-  width: 100%;
-  font-size: medium;
-  color: #ecdbba;
-  overflow: hidden;
+  box-sizing: border-box;
+  font-family: inherit;
+  margin: 20px;
+  font-size: 18px;
+  vertical-align: baseline;
+
+  outline-offset: -2px;
+  width: 80%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #ecdbba;
   background-color: transparent;
-  border: 1px solid #ecdbba;
-  border-radius: 7px;
+  padding: 10px 16px;
+  color: #ecdbba;
   @media screen and (max-width: 960px) {
-    width: 45%;
+    width: 47%;
     position: absolute;
-    right: 43px;
-    text-align: center;
+    right: 55px;
+  }
+  &::placeholder {
+    color: #746c5c;
   }
   &:hover {
     background: transparent;
     transition-duration: 0.4s;
-    box-shadow: 0 0 5px #ecdbba;
+    box-shadow: 0px 0.5px 0.1px 0px #ecdbba;
   }
   &:focus {
     outline: none !important;
-    border: 1px solid #ecdbba;
-    box-shadow: 0 0 5px #ecdbba;
+    box-shadow: 0px 0.5px 0.1px 0px #ecdbba;
   }
 `;
 export const NavLogo = styled(Link)`
@@ -117,12 +126,25 @@ export const NavMenu = styled.ul`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 40vh;
+    height: 100vh;
     position: absolute;
     top: ${({ click }) => (click ? "74%" : "-1000px")};
     opacity: 1;
     background: #000000;
     transition: 0.6s all ease;
+  }
+`;
+export const HR = styled.hr`
+  display: none;
+  @media screen and (max-width: 960px) {
+    display: flex;
+    border: none;
+    height: 0.5px;
+    background-color: #ecdbba;
+    box-shadow: 0 6px 15px #ecdbba;
+    position: relative;
+    top: 20px;
+    width: 100%;
   }
 `;
 export const NavItem = styled.li`

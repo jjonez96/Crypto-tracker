@@ -48,6 +48,9 @@ export const HR = styled.hr`
   background-color: #ecdbba;
   box-shadow: 0 0 15px #ecdbba;
   width: 35%;
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
 `;
 export const Symbol = styled.b`
   color: #ecdbba;

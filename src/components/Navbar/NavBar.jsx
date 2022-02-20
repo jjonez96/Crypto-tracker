@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import {
+  HR,
   Input,
   NavLogo,
   Nav,
@@ -43,20 +44,28 @@ const NavBar = (props) => {
             <Input
               value={props.value}
               onChange={(event) => props.setSearch(event.target.value)}
-              placeholder="Search cryptos..."
+              placeholder="Search..."
             ></Input>
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
-                <NavLinks to="/">Cryptos</NavLinks>
+                <NavLinks to="/">
+                  Cryptos <HR />
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/News">News</NavLinks>
+                <NavLinks to="/News">
+                  News <HR />
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/FavList">Favourites</NavLinks>
+                <NavLinks to="/FavList">
+                  Favourites <HR />
+                </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/Kynnet">Login</NavLinks>
+                <NavLinks to="/Kynnet">
+                  Login <HR />
+                </NavLinks>
               </NavItem>
             </NavMenu>
           </NavbarContainer>
