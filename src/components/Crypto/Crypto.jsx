@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../Navbar/NavBar";
 import BackToTop from "./BackToTop";
-import FavList from "./FavList";
-
+import FavList from "./CryptoList";
+import FollowList from "./FollowList";
+import { Hr, Container1 } from "./CryptoStyles";
+import Addfav from "./buttons/Addfav";
+import RemoveFav from "./buttons/RemoveFav";
 const Crypto = () => {
   const [crypto, setCrypto] = useState([]);
   const [favourites, setFavourites] = useState([]);
@@ -49,6 +52,14 @@ const Crypto = () => {
     console.log(newFavouriteList);
   };
 
+  const removeFavouriteCrypto = (crypto) => {
+    const newFavouriteList = favourites.filter(
+      (favourite) => favourite.id !== crypto.id
+    );
+    setFavourites(newFavouriteList);
+    saveToLocalStorage(newFavouriteList);
+  };
+
   const filterCryptos = crypto.filter((crypto) => {
     return (
       crypto.name.toLowerCase().includes(search.toLowerCase()) ||
@@ -59,16 +70,27 @@ const Crypto = () => {
   return (
     <>
       {isLoading && <p>Loading...</p>}
-
       <NavBar search={search} setSearch={setSearch} />
 
+      <Hr />
       <div>
+        <FollowList heading="Crypto coin list" />
         <FavList
           filterCryptos={filterCryptos}
           handleFavouritesClick={addFavouriteCrypto}
+          favouriteComponent={Addfav}
         />
-        <BackToTop />
       </div>
+      <Container1>
+        <FollowList heading="Your Coins" />
+        <FavList
+          id="FollowList"
+          filterCryptos={favourites}
+          handleFavouritesClick={removeFavouriteCrypto}
+          favouriteComponent={RemoveFav}
+        />
+      </Container1>
+      <BackToTop />
     </>
   );
 };

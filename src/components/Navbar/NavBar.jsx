@@ -4,7 +4,6 @@ import { IconContext } from "react-icons/lib";
 import {
   HR,
   Input,
-  NavLogo,
   Nav,
   NavbarContainer,
   MobileIcon,
@@ -37,7 +36,6 @@ const NavBar = (props) => {
       <IconContext.Provider value={{ color: "#ecdbba" }}>
         <Nav active={scroll} click={click}>
           <NavbarContainer>
-            <NavLogo to="/">Crypto</NavLogo>
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
@@ -58,8 +56,8 @@ const NavBar = (props) => {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/FavList">
-                  Favourites <HR />
+                <NavLinks to="/FollowList">
+                  Follows <HR />
                 </NavLinks>
               </NavItem>
               <NavItem>

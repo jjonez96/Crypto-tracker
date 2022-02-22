@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
-  background: ${({ active }) => (active ? "#000" : "transparent")};
+  background: ${({ active }) => (active ? "#000" : "#000411")};
   transition: 0.8s all ease;
   height: 70px;
   display: flex;
@@ -18,9 +18,9 @@ export const Nav = styled.nav`
     position: sticky;
     top: 0;
     width: 100%;
-    background: ${({ click }) => (click ? "#000" : "#transparent")};
+    background: ${({ click }) => (click ? "#000" : "#000411")};
     transition: 0.8s all ease;
-    background: ${({ active }) => (active ? "#000" : "#transparent")};
+    background: ${({ active }) => (active ? "#000" : "#000411")};
     transition: 0.8s all ease;
   }
 `;
@@ -55,9 +55,7 @@ export const Input = styled.input`
   padding: 10px 16px;
   color: #ecdbba;
   @media screen and (max-width: 960px) {
-    width: 47%;
-    position: absolute;
-    right: 55px;
+    width: 57%;
   }
   &::placeholder {
     color: #746c5c;
@@ -70,29 +68,6 @@ export const Input = styled.input`
   &:focus {
     outline: none !important;
     box-shadow: 0px 0.5px 0.1px 0px #ecdbba;
-  }
-`;
-export const NavLogo = styled(Link)`
-  color: #141414;
-  justify-self: flex-start;
-  cursor: pointer;
-  text-decoration: none;
-
-  font-size: 1.8rem;
-  font-family: "Oooh Baby";
-  background-image: linear-gradient(
-    70deg,
-    rgba(236, 219, 186, 1) 32%,
-    rgba(255, 64, 64, 1) 100%
-  );
-  -webkit-background-clip: text;
-  color: transparent;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  &:hover {
-    transition-duration: 0.4s;
-    text-shadow: 0 0 8px #ecdbba;
   }
 `;
 
@@ -155,23 +130,16 @@ export const NavItem = styled.li`
   }
 `;
 export const NavLinks = styled(Link)`
-  background-image: linear-gradient(
-    70deg,
-    rgba(236, 219, 186, 1) 32%,
-    rgba(255, 64, 64, 1) 100%
-  );
-  -webkit-background-clip: text;
-  color: transparent;
+  color: #ecdbba;
   display: flex;
   align-items: center;
   text-decoration: none;
   font-size: 22px;
-  font-weight: bold;
+  font-weight: 300;
   padding: 2.4rem 2rem;
   width: 100%;
   &:hover {
-    transition-duration: 0.4s;
-    text-shadow: 0 0 8px #ecdbba;
+    text-decoration: underline;
   }
   @media screen and (max-width: 960px) {
     color: linear-gradient(
@@ -187,8 +155,7 @@ export const NavLinks = styled(Link)`
     width: 100%;
     display: table;
     &:hover {
-      transition-duration: 0.4s;
-      text-shadow: 0 0 8px #ecdbba;
+      text-decoration: underline;
     }
   }
 `;

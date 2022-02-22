@@ -1,5 +1,7 @@
 import styled from "styled-components";
-
+export const Container1 = styled.div`
+  background-color: #000411;
+`;
 export const Container = styled.div`
   text-align: center;
   color: #ecdbba;
@@ -32,6 +34,12 @@ export const Button = styled.button`
     box-shadow: 0 0 8px #ecdbba;
   }
 `;
+export const H1 = styled.h1`
+  text-decoration: underline;
+
+  text-align: center;
+  color: #ecdbba;
+`;
 
 export const H2 = styled.h2`
   position: relative;
@@ -48,6 +56,16 @@ export const HR = styled.hr`
   background-color: #ecdbba;
   box-shadow: 0 0 15px #ecdbba;
   width: 35%;
+  @media screen and (max-width: 960px) {
+    width: 60%;
+  }
+`;
+export const Hr = styled.hr`
+  border: none;
+  height: 0.5px;
+  background-color: #ecdbba;
+  box-shadow: 0 0 15px #ecdbba;
+  width: 100%;
   @media screen and (max-width: 960px) {
     width: 100%;
   }

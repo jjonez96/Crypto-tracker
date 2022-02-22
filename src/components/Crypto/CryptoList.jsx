@@ -13,10 +13,11 @@ import {
 } from "./CryptoStyles";
 
 const FavList = (props) => {
+  const FavouriteComponent = props.favouriteComponent;
   return (
     <>
       <Container>
-        {props.filterCryptos.map((cryptos) => (
+        {props.filterCryptos.map((cryptos, id) => (
           <div key={cryptos.id}>
             <Table>
               <tbody>
@@ -76,7 +77,7 @@ const FavList = (props) => {
                     <Button
                       onClick={() => props.handleFavouritesClick(cryptos)}
                     >
-                      Follow
+                      <FavouriteComponent />
                     </Button>
                   </td>
                 </tr>
