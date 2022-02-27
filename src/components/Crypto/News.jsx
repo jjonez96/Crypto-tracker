@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import NavBar from "../Navbar/NavBar";
 import { H2, Container, HR } from "./CryptoStyles";
 import BackToTop from "./BackToTop";
-
+import newsApi from "../config/newsApi";
 const News = () => {
   const [news, setNews] = useState([]);
   const [search, setSearch] = useState("");
@@ -14,7 +14,7 @@ const News = () => {
       method: "GET",
       headers: {
         "x-rapidapi-host": "crypto-news-live3.p.rapidapi.com",
-        "x-rapidapi-key": "95c938f007mshf0d1579551cfd6bp13df49jsncb7139af7d30",
+        "x-rapidapi-key": newsApi,
       },
     })
       .then((response) => {

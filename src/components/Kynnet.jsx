@@ -1,10 +1,8 @@
 import React from "react";
-import NavBar from "./Navbar/NavBar";
 
 function Kynnet() {
   return (
     <div>
-      <NavBar />
       <img src="./pictures/4.png" alt="" />
       <div className="wrapper">
         <div className="box">
