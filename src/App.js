@@ -2,17 +2,17 @@ import "./App.css";
 import React from "react";
 import Crypto from "./components/Crypto/Crypto";
 import { Routes, Route } from "react-router-dom";
-import Kynnet from "./components/Kynnet";
+import Authentication from "./components/Authentication/Authentication";
 import News from "./components/Crypto/News";
-import FollowList from "./components/Crypto/FollowList";
+import Portfolio from "./components/Crypto/Portfolio";
 
 const App = () => {
   return (
     <div>
       <Routes>
         <Route path="/" element={<Crypto />} />
-        <Route path="/Kynnet" element={<Kynnet />} />
-        <Route path="/FollowList" element={<FollowList />} />
+        <Route path="/Authentication" element={<Authentication />} />
+        <Route path="/Portfolio" element={<Portfolio />} />
         <Route path="/News" element={<News />} />
       </Routes>
     </div>

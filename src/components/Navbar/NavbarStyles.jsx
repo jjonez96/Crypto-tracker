@@ -9,13 +9,14 @@ export const Nav = styled.nav`
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  position: sticky;
+  position: fixed;
+  width: 100%;
   top: 0;
   z-index: 999;
   scroll-behavior: smooth;
 
   @media screen and (max-width: 960px) {
-    position: sticky;
+    position: fixed;
     top: 0;
     width: 100%;
     background: ${({ click }) => (click ? "#000" : "#000411")};

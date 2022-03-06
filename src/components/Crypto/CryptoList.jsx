@@ -1,4 +1,6 @@
 import React from "react";
+import { ReactNotifications } from "react-notifications-component";
+import "react-notifications-component/dist/theme.css";
 
 import {
   Table,
@@ -17,6 +19,8 @@ const FavList = (props) => {
   return (
     <>
       <Container>
+        <ReactNotifications />
+
         {props.filterCryptos.map((cryptos, id) => (
           <div key={cryptos.id}>
             <Table>
@@ -70,12 +74,15 @@ const FavList = (props) => {
                         {cryptos.price_change_percentage_24h.toFixed(2)}%
                       </Green>
                     )}
+                    <HR />
                   </td>
                 </tr>
+
                 <tr>
                   <td>
                     <Button
-                      onClick={() => props.handleFavouritesClick(cryptos)}
+                      disabled={props.disableds}
+                      onClick={() => [props.handleFavouritesClick(cryptos)]}
                     >
                       <FavouriteComponent />
                     </Button>
@@ -83,7 +90,6 @@ const FavList = (props) => {
                 </tr>
               </tbody>
             </Table>
-            <HR />
           </div>
         ))}
       </Container>

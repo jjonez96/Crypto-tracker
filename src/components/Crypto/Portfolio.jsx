@@ -3,8 +3,9 @@ import CryptoList from "./CryptoList";
 import NavBar from "../Navbar/NavBar";
 import RemoveFav from "./buttons/RemoveFav";
 import BackToTop from "./BackToTop";
+import { Store } from "react-notifications-component";
 
-const FollowList = () => {
+const Portfolio = () => {
   const [favourites, setFavourites] = useState([]);
 
   useEffect(() => {
@@ -27,6 +28,16 @@ const FollowList = () => {
     );
     setFavourites(newFavouriteList);
     saveToLocalStorage(newFavouriteList);
+    Store.addNotification({
+      title: `${crypto.name} removed`,
+      type: "danger",
+      container: "top-center",
+      animationIn: ["animated", "fadeIn"],
+      animationOut: ["animated", "fadeOut"],
+      dismiss: {
+        duration: 1000,
+      },
+    });
   };
 
   return (
@@ -44,4 +55,4 @@ const FollowList = () => {
   );
 };
 
-export default FollowList;
+export default Portfolio;

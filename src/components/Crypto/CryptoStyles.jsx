@@ -1,8 +1,7 @@
 import styled from "styled-components";
-export const Container1 = styled.div`
-  background-color: #000411;
-`;
+
 export const Container = styled.div`
+  margin-top: 6%;
   text-align: center;
   color: #ecdbba;
 `;
@@ -26,12 +25,12 @@ export const Button = styled.button`
 
   &:hover {
     transition-duration: 0.4s;
-    box-shadow: 0 0 8px #ecdbba;
+    box-shadow: 0 0 5px #ecdbba;
   }
   &:focus {
     outline: none !important;
     border: 1px solid #ecdbba;
-    box-shadow: 0 0 8px #ecdbba;
+    box-shadow: 0 0 5px #ecdbba;
   }
 `;
 export const H1 = styled.h1`
@@ -55,7 +54,8 @@ export const HR = styled.hr`
   height: 0.5px;
   background-color: #ecdbba;
   box-shadow: 0 0 15px #ecdbba;
-  width: 35%;
+  position: relative;
+  bottom: 20px;
   @media screen and (max-width: 960px) {
     width: 60%;
   }
@@ -86,30 +86,45 @@ export const Green = styled.p`
   color: #11d811;
 `;
 export const Table = styled.table`
-  display: grid;
+  display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
+  float: left;
+  margin: 1%;
+  width: 23%;
+  height: 350px;
+  background-color: #000208;
+  border: 1px solid #ecdbba;
+  border-radius: 5px;
+  box-shadow: 1px 1px 4px 0px #ecdbba inset, -1px -1px 4px 0px #ecdbba inset;
+  @media screen and (max-width: 960px) {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    top: 60px;
+    left: 12px;
+    width: 90%;
+    margin-bottom: 4%;
+    height: 350px;
+  }
 `;
 
 export const Backtotop = styled.button`
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  font-size: 60px;
-  background-image: linear-gradient(
-    70deg,
-    rgba(236, 219, 186, 1) 32%,
-    rgba(255, 64, 64, 1) 100%
-  );
-  -webkit-background-clip: text;
-  color: transparent;
-
+  bottom: 10px;
+  right: 10px;
+  font-size: 50px;
+  height: 55px;
+  color: #ecdbba;
+  background-color: #000;
   cursor: pointer;
   border-radius: 5px;
   border: 1px solid #ecdbba;
+
   &:hover {
-    box-shadow: 0 0 10px #ecdbba;
+    box-shadow: 0 0 5px #ecdbba;
     transition-duration: 0.4s;
   }
 `;

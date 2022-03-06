@@ -47,7 +47,12 @@ const NavBar = (props) => {
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
                 <NavLinks to="/">
-                  Cryptos <HR />
+                  Coins <HR />
+                </NavLinks>
+              </NavItem>
+              <NavItem>
+                <NavLinks to="/Portfolio">
+                  Portfolio <HR />
                 </NavLinks>
               </NavItem>
               <NavItem>
@@ -56,12 +61,7 @@ const NavBar = (props) => {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/FollowList">
-                  Follows <HR />
-                </NavLinks>
-              </NavItem>
-              <NavItem>
-                <NavLinks to="/Kynnet">
+                <NavLinks to="/Authentication">
                   Login <HR />
                 </NavLinks>
               </NavItem>
