@@ -81,7 +81,6 @@ const FavList = (props) => {
                 <tr>
                   <td>
                     <Button
-                      disabled={props.disableds}
                       onClick={() => [props.handleFavouritesClick(cryptos)]}
                     >
                       <FavouriteComponent />

@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { auth } from "../../firebase";
+import { auth } from "../../config/firebase";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-import NavBar from "../Navbar/NavBar";
+import NavBar from "../../components/Navbar/NavBar";
 import { Div, Input, Button, HR } from "./AuthStyles";
 
 function Authentication() {

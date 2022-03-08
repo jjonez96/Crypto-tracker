@@ -1,13 +1,11 @@
 import React, { useState, useEffect } from "react";
-import NavBar from "../Navbar/NavBar";
-import BackToTop from "./BackToTop";
+import NavBar from "../../components/Navbar/NavBar";
+import BackToTop from "../../components/BackToTop";
 import CryptoList from "./CryptoList";
 import Addfav from "./buttons/Addfav";
 import { Store } from "react-notifications-component";
-import { db } from "../../firebase";
-import { doc, setDoc } from "firebase/firestore";
 
-const Crypto = () => {
+const CryptoApi = () => {
   const [crypto, setCrypto] = useState([]);
   const [favourites, setFavourites] = useState([]);
   const [search, setSearch] = useState("");
@@ -30,13 +28,19 @@ const Crypto = () => {
       });
   }, []);
 
+  useEffect(() => {
+    const coinPortfolio = JSON.parse(localStorage.getItem("portfolio"));
+    if (coinPortfolio) {
+      setFavourites(coinPortfolio);
+    }
+  }, []);
+
   const saveToLocalStorage = (items) => {
-    localStorage.setItem("crypto-favourites", JSON.stringify(items));
+    localStorage.setItem("portfolio", JSON.stringify(items));
   };
 
   const addFavouriteCrypto = (crypto) => {
     const newFavouriteList = [...favourites, crypto];
-
     setFavourites(newFavouriteList);
     saveToLocalStorage(newFavouriteList);
     Store.addNotification({
@@ -60,15 +64,11 @@ const Crypto = () => {
     );
   });
 
-  let storedCrypto = favourites.some((o) => o.id === crypto.id);
-  const disableds = storedCrypto ? true : false;
   return (
     <>
       <NavBar search={search} setSearch={setSearch} />
-
       <div>
         <CryptoList
-          disableds={disableds}
           filterCryptos={filterCryptos}
           handleFavouritesClick={addFavouriteCrypto}
           favouriteComponent={Addfav}
@@ -79,4 +79,4 @@ const Crypto = () => {
   );
 };
 
-export default Crypto;
+export default CryptoApi;

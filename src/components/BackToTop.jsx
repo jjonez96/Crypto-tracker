@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Backtotop } from "./CryptoStyles";
+import { Backtotop } from "../pages/CryptoComponents/CryptoStyles";
 const BackToTop = () => {
   const [showButton, setShowButton] = useState(false);
 

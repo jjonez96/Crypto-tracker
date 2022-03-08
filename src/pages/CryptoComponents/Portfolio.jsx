@@ -1,17 +1,15 @@
 import React, { useState, useEffect } from "react";
 import CryptoList from "./CryptoList";
-import NavBar from "../Navbar/NavBar";
+import NavBar from "../../components/Navbar/NavBar";
 import RemoveFav from "./buttons/RemoveFav";
-import BackToTop from "./BackToTop";
+import BackToTop from "../../components/BackToTop";
 import { Store } from "react-notifications-component";
 
 const Portfolio = () => {
   const [favourites, setFavourites] = useState([]);
 
   useEffect(() => {
-    const cryptoFavourites = JSON.parse(
-      localStorage.getItem("crypto-favourites")
-    );
+    const cryptoFavourites = JSON.parse(localStorage.getItem("portfolio"));
 
     if (cryptoFavourites) {
       setFavourites(cryptoFavourites);
@@ -19,7 +17,7 @@ const Portfolio = () => {
   }, []);
 
   const saveToLocalStorage = (items) => {
-    localStorage.setItem("crypto-favourites", JSON.stringify(items));
+    localStorage.setItem("portfolio", JSON.stringify(items));
   };
 
   const removeFavouriteCrypto = (crypto) => {

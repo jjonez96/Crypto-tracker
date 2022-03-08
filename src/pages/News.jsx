@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
-import NavBar from "../Navbar/NavBar";
-import { H2, Container, HR } from "./CryptoStyles";
-import BackToTop from "./BackToTop";
+import NavBar from "../components/Navbar/NavBar";
+import { H2, Container, HR } from "./CryptoComponents/CryptoStyles";
+import BackToTop from "../components/BackToTop";
 import newsApi from "../config/newsApi";
 const News = () => {
   const [news, setNews] = useState([]);
