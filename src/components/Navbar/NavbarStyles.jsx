@@ -37,41 +37,6 @@ export const NavbarContainer = styled.div`
   }
 `;
 
-export const Input = styled.input`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  font-family: inherit;
-  margin: 20px;
-  font-size: 18px;
-  vertical-align: baseline;
-
-  outline-offset: -2px;
-  width: 80%;
-  height: 40px;
-  border: none;
-  border-bottom: 1px solid #ecdbba;
-  background-color: transparent;
-  padding: 10px 16px;
-  color: #ecdbba;
-  @media screen and (max-width: 960px) {
-    width: 57%;
-  }
-  &::placeholder {
-    color: #746c5c;
-  }
-  &:hover {
-    background: transparent;
-    transition-duration: 0.4s;
-    box-shadow: 0px 0.5px 0.1px 0px #ecdbba;
-  }
-  &:focus {
-    outline: none !important;
-    box-shadow: 0px 0.5px 0.1px 0px #ecdbba;
-  }
-`;
-
 export const MobileIcon = styled.div`
   display: none;
 

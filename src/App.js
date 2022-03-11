@@ -2,20 +2,24 @@ import "./App.css";
 import React from "react";
 import CryptoApi from "./pages/CryptoComponents/CryptoApi";
 import { Routes, Route } from "react-router-dom";
-import Authentication from "./pages/Authentication/Authentication";
+import Login from "./pages/Login/Login";
 import News from "./pages/News";
 import Portfolio from "./pages/CryptoComponents/Portfolio";
+import BackToTop from "./components/BackToTop";
+import NavBar from "./components/Navbar/NavBar";
 
 const App = () => {
   return (
-    <div>
+    <>
+      <NavBar />
       <Routes>
-        <Route path="/" element={<CryptoApi />} />
-        <Route path="/Authentication" element={<Authentication />} />
+        <Route exact path="/" element={<CryptoApi />} />
+        <Route path="/Login" element={<Login />} />
         <Route path="/Portfolio" element={<Portfolio />} />
         <Route path="/News" element={<News />} />
       </Routes>
-    </div>
+      <BackToTop />
+    </>
   );
 };
 

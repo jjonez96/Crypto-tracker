@@ -97,6 +97,7 @@ export const Table = styled.table`
   background-color: #000208;
   border: 1px solid #ecdbba;
   border-radius: 5px;
+  transition: transform 0.1s;
   box-shadow: 1px 1px 4px 0px #ecdbba inset, -1px -1px 4px 0px #ecdbba inset;
   @media screen and (max-width: 960px) {
     position: relative;
@@ -108,6 +109,9 @@ export const Table = styled.table`
     width: 90%;
     margin-bottom: 4%;
     height: 350px;
+  }
+  &:hover {
+    transform: scale(1.03);
   }
 `;
 
@@ -126,5 +130,32 @@ export const Backtotop = styled.button`
   &:hover {
     box-shadow: 0 0 5px #ecdbba;
     transition-duration: 0.4s;
+  }
+`;
+
+export const Input = styled.input`
+  font-family: inherit;
+  margin: 20px;
+  font-size: 18px;
+  vertical-align: baseline;
+  outline-offset: -2px;
+  width: 95%;
+  border: none;
+  border-bottom: 1px solid #ecdbba;
+  background-color: transparent;
+  padding: 10px 16px;
+  color: #ecdbba;
+  @media screen and (max-width: 960px) {
+    width: 70%;
+    position: relative;
+    bottom: -40px;
+  }
+  &::placeholder {
+    color: #746c5c;
+  }
+
+  &:focus {
+    outline: none !important;
+    box-shadow: 0px 0.5px 0.1px 0px #ecdbba;
   }
 `;

@@ -6,8 +6,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-import NavBar from "../../components/Navbar/NavBar";
-import { Div, Input, Button, HR } from "./AuthStyles";
+import { Div, Input, Button, HR } from "./LoginStyles";
 
 function Authentication() {
   const [email, setEmail] = useState("");
@@ -17,6 +16,7 @@ function Authentication() {
   onAuthStateChanged(auth, (currentUser) => {
     setUser(currentUser);
   });
+
   const login = async (e) => {
     e.preventDefault();
     try {
@@ -43,7 +43,6 @@ function Authentication() {
   };
   return (
     <>
-      <NavBar />
       <Div>
         <h1>Login</h1>
         <p>logged in as:</p>
@@ -65,19 +64,19 @@ function Authentication() {
           />
           <br />
           <br />
-          <Button onClick={login}>Log In</Button>
+          <Button onClick={login}>Sign In</Button>
           <br />
           <br />
           <p>
             No account? <br />
-            Click Create Account instead of login.
+            Click Create Account instead of Sign In.
           </p>
           <Button onClick={register}>Create Account</Button>
           <br />
           <br />
           <br />
           <HR />
-          <Button onClick={logout}>Log Out</Button>
+          <Button onClick={logout}>Sign Out</Button>
         </form>
       </Div>
     </>

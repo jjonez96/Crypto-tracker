@@ -12,16 +12,22 @@ import {
   Symbol,
   Red,
   Green,
+  Input,
 } from "./CryptoStyles";
 
-const FavList = (props) => {
-  const FavouriteComponent = props.favouriteComponent;
+const CryptoTable = (props) => {
+  const BtnState = props.btnState;
   return (
     <>
       <Container>
+        <Input
+          value={props.value}
+          onChange={(event) => props.setSearch(event.target.value)}
+          placeholder="Search coins..."
+        ></Input>
         <ReactNotifications />
 
-        {props.filterCryptos.map((cryptos, id) => (
+        {props.filterCryptos.map((cryptos) => (
           <div key={cryptos.id}>
             <Table>
               <tbody>
@@ -83,7 +89,7 @@ const FavList = (props) => {
                     <Button
                       onClick={() => [props.handleFavouritesClick(cryptos)]}
                     >
-                      <FavouriteComponent />
+                      <BtnState />
                     </Button>
                   </td>
                 </tr>
@@ -96,4 +102,4 @@ const FavList = (props) => {
   );
 };
 
-export default FavList;
+export default CryptoTable;

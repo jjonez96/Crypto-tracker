@@ -3,7 +3,6 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
 import {
   HR,
-  Input,
   Nav,
   NavbarContainer,
   MobileIcon,
@@ -12,10 +11,9 @@ import {
   NavItem,
 } from "./NavbarStyles";
 
-const NavBar = (props) => {
+const NavBar = () => {
   const [click, setClick] = useState(false);
   const [scroll, setScoll] = useState(false);
-
   const handleClick = () => setClick(!click);
 
   const changeNav = () => {
@@ -39,11 +37,6 @@ const NavBar = (props) => {
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
-            <Input
-              value={props.value}
-              onChange={(event) => props.setSearch(event.target.value)}
-              placeholder="Search..."
-            ></Input>
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
                 <NavLinks to="/">
@@ -61,7 +54,7 @@ const NavBar = (props) => {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/Authentication">
+                <NavLinks to="/Login">
                   Login <HR />
                 </NavLinks>
               </NavItem>

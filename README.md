@@ -1,6 +1,6 @@
 Should include several (>3) components X
 
-Should use props to pass data between the components
+Should use props to pass data between the components X
 
 Should be structured correctly (components, containers, menu/Menu.jsx, menu/Menu.css) X
 
@@ -10,7 +10,7 @@ Should only use functional component and hooks X
 
 Should have unit test (>3) to test components
 
-Should fetch some data from RESTful backend (like Firebase)
+Should fetch some data from RESTful backend (like Firebase) X
 
 Source code should be in gitlab.com X
 

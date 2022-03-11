@@ -1,18 +1,15 @@
 import React, { useState, useEffect } from "react";
-import CryptoList from "./CryptoList";
-import NavBar from "../../components/Navbar/NavBar";
+import CryptoTable from "./CryptoTable";
 import RemoveFav from "./buttons/RemoveFav";
-import BackToTop from "../../components/BackToTop";
 import { Store } from "react-notifications-component";
 
 const Portfolio = () => {
-  const [favourites, setFavourites] = useState([]);
-
+  const [portfolio, setPortfolio] = useState([]);
+  const [search, setSearch] = useState("");
   useEffect(() => {
-    const cryptoFavourites = JSON.parse(localStorage.getItem("portfolio"));
-
-    if (cryptoFavourites) {
-      setFavourites(cryptoFavourites);
+    const coinPortfolio = JSON.parse(localStorage.getItem("portfolio"));
+    if (coinPortfolio) {
+      setPortfolio(coinPortfolio);
     }
   }, []);
 
@@ -21,11 +18,12 @@ const Portfolio = () => {
   };
 
   const removeFavouriteCrypto = (crypto) => {
-    const newFavouriteList = favourites.filter(
+    const newPortfolio = portfolio.filter(
       (favourite) => favourite.id !== crypto.id
     );
-    setFavourites(newFavouriteList);
-    saveToLocalStorage(newFavouriteList);
+
+    setPortfolio(newPortfolio);
+    saveToLocalStorage(newPortfolio);
     Store.addNotification({
       title: `${crypto.name} removed`,
       type: "danger",
@@ -38,17 +36,25 @@ const Portfolio = () => {
     });
   };
 
+  const filterCryptos = portfolio.filter((crypto) => {
+    return (
+      crypto.name.toLowerCase().includes(search.toLowerCase()) ||
+      crypto.symbol.toLowerCase().includes(search.toLowerCase()) ||
+      crypto.market_cap_rank.toString().includes(search.toString())
+    );
+  });
+
   return (
     <div>
-      <NavBar />
       <div>
-        <CryptoList
-          filterCryptos={favourites}
+        <CryptoTable
+          filterCryptos={filterCryptos}
+          search={search}
+          setSearch={setSearch}
           handleFavouritesClick={removeFavouriteCrypto}
-          favouriteComponent={RemoveFav}
+          btnState={RemoveFav}
         />
       </div>
-      <BackToTop />
     </div>
   );
 };
