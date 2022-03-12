@@ -6,6 +6,7 @@ import { Store } from "react-notifications-component";
 const Portfolio = () => {
   const [portfolio, setPortfolio] = useState([]);
   const [search, setSearch] = useState("");
+
   useEffect(() => {
     const coinPortfolio = JSON.parse(localStorage.getItem("portfolio"));
     if (coinPortfolio) {
@@ -40,21 +41,20 @@ const Portfolio = () => {
     return (
       crypto.name.toLowerCase().includes(search.toLowerCase()) ||
       crypto.symbol.toLowerCase().includes(search.toLowerCase()) ||
+      crypto.id.toLowerCase().includes(search.toLowerCase()) ||
       crypto.market_cap_rank.toString().includes(search.toString())
     );
   });
 
   return (
     <div>
-      <div>
-        <CryptoTable
-          filterCryptos={filterCryptos}
-          search={search}
-          setSearch={setSearch}
-          handleFavouritesClick={removeFavouriteCrypto}
-          btnState={RemoveFav}
-        />
-      </div>
+      <CryptoTable
+        filterCryptos={filterCryptos}
+        search={search}
+        setSearch={setSearch}
+        handleFavouritesClick={removeFavouriteCrypto}
+        btnState={RemoveFav}
+      />
     </div>
   );
 };

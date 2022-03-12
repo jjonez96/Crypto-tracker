@@ -7,8 +7,10 @@ const CryptoApi = () => {
   const [crypto, setCrypto] = useState([]);
   const [portfolio, setPortfolio] = useState([]);
   const [search, setSearch] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
+    setIsLoading(true);
     fetch(
       "https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=300&page=1&sparkline=false"
     )
@@ -18,6 +20,7 @@ const CryptoApi = () => {
           return;
         }
         response.json().then((crypto) => {
+          setIsLoading(false);
           setCrypto(crypto);
         });
       })
@@ -39,8 +42,9 @@ const CryptoApi = () => {
 
   const addFavouriteCrypto = (crypto) => {
     const newFavouriteList = [...portfolio, crypto];
-    setPortfolio(newFavouriteList);
-    saveToLocalStorage(newFavouriteList);
+    const unique = [...new Set(newFavouriteList)];
+    setPortfolio(unique);
+    saveToLocalStorage(unique);
     Store.addNotification({
       title: `${crypto.name} added to Portfolio`,
       type: "success",
@@ -51,14 +55,13 @@ const CryptoApi = () => {
         duration: 1000,
       },
     });
-
-    console.log(newFavouriteList);
   };
 
   const filterCryptos = crypto.filter((crypto) => {
     return (
       crypto.name.toLowerCase().includes(search.toLowerCase()) ||
       crypto.symbol.toLowerCase().includes(search.toLowerCase()) ||
+      crypto.id.toLowerCase().includes(search.toLowerCase()) ||
       crypto.market_cap_rank.toString().includes(search.toString())
     );
   });
@@ -67,6 +70,7 @@ const CryptoApi = () => {
     <>
       <div>
         <CryptoTable
+          isLoading={isLoading}
           filterCryptos={filterCryptos}
           search={search}
           setSearch={setSearch}

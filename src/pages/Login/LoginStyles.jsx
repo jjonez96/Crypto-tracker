@@ -19,7 +19,7 @@ export const Input = styled.input`
   vertical-align: baseline;
   outline-offset: -2px;
   width: 20%;
-  height: 25px;
+  height: 50px;
   border: none;
   border-bottom: 1px solid #ecdbba;
   background-color: transparent;
@@ -27,7 +27,7 @@ export const Input = styled.input`
   @media screen and (max-width: 960px) {
     justify-content: center;
     align-items: center;
-    width: 57%;
+    width: 85%;
   }
   &::placeholder {
     color: #746c5c;

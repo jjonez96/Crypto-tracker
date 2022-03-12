@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { H2, Container, HR } from "./CryptoComponents/CryptoStyles";
+import { H2, Container, HR, B } from "./CryptoComponents/CryptoStyles";
 import newsApi from "../config/newsApi";
 const News = () => {
   const [news, setNews] = useState([]);
@@ -28,7 +28,6 @@ const News = () => {
         console.error(err);
       });
   }, []);
-  console.log(news);
 
   return (
     <>
@@ -38,7 +37,9 @@ const News = () => {
           <div className="center" key={i}>
             <H2>{news.title}</H2>
             <a href={news.url}>
-              <img src="https://picsum.photos/200/300" alt="asd" />
+              <img src="https://picsum.photos/200/300" alt="picsum" />
+              <br />
+              <B>Read more</B>
             </a>
             <div>
               <br />

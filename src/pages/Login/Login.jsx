@@ -44,14 +44,15 @@ function Authentication() {
   return (
     <>
       <Div>
-        <h1>Login</h1>
-        <p>logged in as:</p>
+        logged in as:
+        <br />
         {user?.email}
         <form>
           <p>Email:</p>
           <Input
             type="text"
             value={email}
+            placeholder="Your email..."
             onChange={(e) => {
               setEmail(e.target.value);
             }}
@@ -60,6 +61,7 @@ function Authentication() {
           <Input
             type="password"
             value={password}
+            placeholder="Your password..."
             onChange={(e) => setPassword(e.target.value)}
           />
           <br />

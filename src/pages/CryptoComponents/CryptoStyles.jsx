@@ -35,7 +35,6 @@ export const Button = styled.button`
 `;
 export const H1 = styled.h1`
   text-decoration: underline;
-
   text-align: center;
   color: #ecdbba;
 `;
@@ -48,6 +47,7 @@ export const H2 = styled.h2`
 
 export const B = styled.b`
   color: #c84b31;
+  text-decoration: none;
 `;
 export const HR = styled.hr`
   border: none;
