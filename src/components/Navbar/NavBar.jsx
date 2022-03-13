@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaTimes, FaBitcoin } from "react-icons/fa";
 import { IconContext } from "react-icons/lib";
+
 import {
   HR,
   Nav,
+  NavLogo,
   NavbarContainer,
   MobileIcon,
   NavMenu,
@@ -17,7 +19,7 @@ const NavBar = () => {
   const handleClick = () => setClick(!click);
 
   const changeNav = () => {
-    if (window.scrollY >= 80) {
+    if (window.scrollY >= 200) {
       setScoll(true);
     } else {
       setScoll(false);
@@ -37,6 +39,9 @@ const NavBar = () => {
             <MobileIcon onClick={handleClick}>
               {click ? <FaTimes /> : <FaBars />}
             </MobileIcon>
+            <NavLogo to="/">
+              <FaBitcoin />
+            </NavLogo>
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
                 <NavLinks to="/">

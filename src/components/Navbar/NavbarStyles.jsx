@@ -19,9 +19,7 @@ export const Nav = styled.nav`
     position: fixed;
     top: 0;
     width: 100%;
-    background: ${({ click }) => (click ? "#000" : "#000411")};
-    transition: 0.8s all ease;
-    background: ${({ active }) => (active ? "#000" : "#000411")};
+    background: ${({ click }) => (click ? "#000" : "#000")};
     transition: 0.8s all ease;
   }
 `;
@@ -37,12 +35,21 @@ export const NavbarContainer = styled.div`
   }
 `;
 
+export const NavLogo = styled(Link)`
+  cursor: pointer;
+  font-size: 2rem;
+  margin: 15px;
+  display: flex;
+  align-items: center;
+`;
+
 export const MobileIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 960px) {
     display: block;
     position: absolute;
+
     top: 1;
     right: 0;
     background-image: linear-gradient(
