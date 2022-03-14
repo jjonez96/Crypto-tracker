@@ -32,7 +32,7 @@ const NavBar = () => {
   }, []);
 
   return (
-    <>
+    <div>
       <IconContext.Provider value={{ color: "#ecdbba" }}>
         <Nav active={scroll} click={click}>
           <NavbarContainer>
@@ -49,17 +49,17 @@ const NavBar = () => {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/Portfolio">
+                <NavLinks to="/PortfolioPage">
                   Portfolio <HR />
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/News">
+                <NavLinks to="/NewsPage">
                   News <HR />
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/Login">
+                <NavLinks to="/LoginPage">
                   Login <HR />
                 </NavLinks>
               </NavItem>
@@ -67,7 +67,7 @@ const NavBar = () => {
           </NavbarContainer>
         </Nav>
       </IconContext.Provider>
-    </>
+    </div>
   );
 };
 export default NavBar;

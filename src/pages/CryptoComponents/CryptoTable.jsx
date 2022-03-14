@@ -85,9 +85,7 @@ const CryptoTable = (props) => {
                 </tr>
                 <tr>
                   <td>
-                    <Button
-                      onClick={() => props.handleFavouritesClick(cryptos)}
-                    >
+                    <Button onClick={() => props.addToPortfolio(cryptos)}>
                       <BtnState />
                     </Button>
                   </td>
