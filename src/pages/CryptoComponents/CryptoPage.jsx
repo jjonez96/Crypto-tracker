@@ -73,7 +73,7 @@ const CryptoApi = () => {
         filterCryptos={filterCryptos}
         search={search}
         setSearch={setSearch}
-        addToPortfolio={addToPortfolio}
+        handleFavouritesClick={addToPortfolio}
         btnState={Addfav}
       />
     </div>

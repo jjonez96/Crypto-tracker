@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { FaBars, FaTimes, FaBitcoin } from "react-icons/fa";
+import { FaBitcoin } from "react-icons/fa";
+import { CgClose, CgMenuRight } from "react-icons/cg";
 import { IconContext } from "react-icons/lib";
 
 import {
@@ -37,7 +38,7 @@ const NavBar = () => {
         <Nav active={scroll} click={click}>
           <NavbarContainer>
             <MobileIcon onClick={handleClick}>
-              {click ? <FaTimes /> : <FaBars />}
+              {click ? <CgClose size={35} /> : <CgMenuRight size={35} />}
             </MobileIcon>
             <NavLogo to="/">
               <FaBitcoin />

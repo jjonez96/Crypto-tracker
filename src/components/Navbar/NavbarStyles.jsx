@@ -47,9 +47,9 @@ export const MobileIcon = styled.div`
   display: none;
 
   @media screen and (max-width: 960px) {
-    display: block;
+    display: flex;
     position: absolute;
-
+    margin-right: -20px;
     top: 1;
     right: 0;
     background-image: linear-gradient(
@@ -112,6 +112,9 @@ export const NavLinks = styled(Link)`
   padding: 2.4rem 2rem;
   width: 100%;
   &:hover {
+    text-decoration: underline;
+  }
+  &:focus {
     text-decoration: underline;
   }
   @media screen and (max-width: 960px) {

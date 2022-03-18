@@ -9,7 +9,9 @@ const Portfolio = () => {
 
   useEffect(() => {
     const coinPortfolio = JSON.parse(localStorage.getItem("portfolio"));
-    if (coinPortfolio) {
+    if (coinPortfolio === null) {
+      alert("No coins in portfolio. Add some.");
+    } else {
       setPortfolio(coinPortfolio);
     }
   }, []);
@@ -20,6 +22,7 @@ const Portfolio = () => {
 
   const removeFavouriteCrypto = (crypto) => {
     const newPortfolio = portfolio.filter((follow) => follow.id !== crypto.id);
+
     setPortfolio(newPortfolio);
     saveToLocalStorage(newPortfolio);
     Store.addNotification({

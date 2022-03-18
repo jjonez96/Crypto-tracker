@@ -1,9 +1,12 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin-top: 6%;
+  margin: 7%;
   text-align: center;
   color: #ecdbba;
+  @media screen and (max-width: 960px) {
+    margin-top: 20%;
+  }
 `;
 
 export const Button = styled.button`
@@ -86,27 +89,27 @@ export const Green = styled.p`
   color: #11d811;
 `;
 export const Table = styled.table`
+  --x: 50%;
+  --y: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   float: left;
   margin: 1%;
-  width: 23%;
+  width: 18%;
   height: 350px;
   background-color: #000208;
   border: 1px solid #ecdbba;
-  border-radius: 5px;
-  transition: transform 0.1s;
-  box-shadow: 1px 1px 4px 0px #ecdbba inset, -1px -1px 4px 0px #ecdbba inset;
+
   @media screen and (max-width: 960px) {
     position: relative;
     text-align: center;
     align-items: center;
     justify-content: center;
     top: 60px;
-    left: 12px;
-    width: 90%;
+    left: 6px;
+    width: 92%;
     margin-bottom: 4%;
     height: 350px;
   }
@@ -115,22 +118,13 @@ export const Table = styled.table`
   }
 `;
 
-export const Backtotop = styled.button`
+export const Backtotop = styled.a`
   position: fixed;
   bottom: 10px;
   right: 10px;
-  font-size: 50px;
-  height: 55px;
   color: #ecdbba;
-  background-color: #000;
+  background: transparent;
   cursor: pointer;
-  border-radius: 5px;
-  border: 1px solid #ecdbba;
-
-  &:hover {
-    box-shadow: 0 0 5px #ecdbba;
-    transition-duration: 0.4s;
-  }
 `;
 
 export const Input = styled.input`

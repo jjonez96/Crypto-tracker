@@ -20,13 +20,13 @@ const CryptoTable = (props) => {
   return (
     <>
       <Container>
-        {props.isLoading && <p>Loading...</p>}
         <Input
           value={props.value}
           onChange={(event) => props.setSearch(event.target.value)}
           placeholder="Search coins..."
         ></Input>
         <ReactNotifications />
+        {props.isLoading && <p>Loading...</p>}
         {props.filterCryptos.map((cryptos) => (
           <div key={cryptos.id}>
             <Table>
@@ -85,7 +85,9 @@ const CryptoTable = (props) => {
                 </tr>
                 <tr>
                   <td>
-                    <Button onClick={() => props.addToPortfolio(cryptos)}>
+                    <Button
+                      onClick={() => props.handleFavouritesClick(cryptos)}
+                    >
                       <BtnState />
                     </Button>
                   </td>

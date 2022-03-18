@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Backtotop } from "../pages/CryptoComponents/CryptoStyles";
+import { BsFillArrowUpCircleFill } from "react-icons/bs";
 const BackToTop = () => {
   const [showButton, setShowButton] = useState(false);
 
@@ -21,7 +22,11 @@ const BackToTop = () => {
   };
   return (
     <div>
-      <>{showButton && <Backtotop onClick={scrollToTop}>&#8673;</Backtotop>}</>
+      {showButton && (
+        <Backtotop onClick={scrollToTop}>
+          <BsFillArrowUpCircleFill size={35} />
+        </Backtotop>
+      )}
     </div>
   );
 };

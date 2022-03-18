@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { H2, Container, HR, B } from "./CryptoComponents/CryptoStyles";
 import newsApi from "../config/newsApi";
-const News = () => {
+const NewsPage = () => {
   const [news, setNews] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -52,4 +52,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default NewsPage;

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { auth } from "../../config/firebase";
 import {
+  onAuthStateChanged,
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
   signOut,
@@ -10,6 +11,11 @@ import { Div, Input, Button, HR } from "./LoginStyles";
 function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [user, setUser] = useState({});
+
+  onAuthStateChanged(auth, (currentUser) => {
+    setUser(currentUser);
+  });
 
   const login = async (e) => {
     e.preventDefault();
@@ -39,6 +45,8 @@ function LoginPage() {
   return (
     <div>
       <Div>
+        <p>logged in as:</p>
+        {user?.email}
         <form>
           <p>Email:</p>
           <Input
