@@ -67,7 +67,7 @@ const CryptoApi = () => {
   });
 
   return (
-    <div>
+    <>
       <CryptoTable
         isLoading={isLoading}
         filterCryptos={filterCryptos}
@@ -76,7 +76,7 @@ const CryptoApi = () => {
         handleFavouritesClick={addToPortfolio}
         btnState={Addfav}
       />
-    </div>
+    </>
   );
 };
 

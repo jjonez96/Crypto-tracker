@@ -153,3 +153,13 @@ export const Input = styled.input`
     box-shadow: 0px 0.5px 0.1px 0px #ecdbba;
   }
 `;
+export const Img = styled.img`
+  object-fit: cover;
+  width: 500px;
+  height: 300px;
+  @media screen and (max-width: 960px) {
+    margin-left: -30px;
+    width: 400px;
+    height: 250px;
+  }
+`;

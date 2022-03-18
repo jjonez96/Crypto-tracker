@@ -47,7 +47,7 @@ const Portfolio = () => {
   });
 
   return (
-    <div>
+    <>
       <CryptoTable
         filterCryptos={filterCryptos}
         search={search}
@@ -55,7 +55,7 @@ const Portfolio = () => {
         handleFavouritesClick={removeFavouriteCrypto}
         btnState={RemoveFav}
       />
-    </div>
+    </>
   );
 };
 

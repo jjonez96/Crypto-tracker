@@ -21,13 +21,13 @@ const BackToTop = () => {
     });
   };
   return (
-    <div>
+    <>
       {showButton && (
         <Backtotop onClick={scrollToTop}>
           <BsFillArrowUpCircleFill size={35} />
         </Backtotop>
       )}
-    </div>
+    </>
   );
 };
 

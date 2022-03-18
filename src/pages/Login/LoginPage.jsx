@@ -43,7 +43,7 @@ function LoginPage() {
   };
 
   return (
-    <div>
+    <>
       <Div>
         <p>logged in as:</p>
         {user?.email}
@@ -81,7 +81,7 @@ function LoginPage() {
           <Button onClick={logout}>Sign Out</Button>
         </form>
       </Div>
-    </div>
+    </>
   );
 }
 
