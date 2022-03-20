@@ -5,9 +5,9 @@ https://coin-app-8164d.web.app
 
 **Projektin idea:**
 <br />
-Tämän projektin avulla voit seurailla haluamiasi kryptovaluuttoja lisäämällä niitä portfolioon ja voit etsiä niitä hakukentässä nimen, lyhenteen tai rankin perusteella.
+Tämän projektin avulla voit seurata haluamiasi kryptovaluuttoja lisäämällä niitä portfolioon ja voit etsiä niitä hakukentässä nimen, lyhenteen tai rankin perusteella.
 <br />
-Voit katsella myös kryptovaluuttoihin liittyviä uutisia.
+Voit selata myös kryptovaluuttoihin liittyviä uutisia.
 <br />
 Kirjautumisjärjestelmä on todella alkeellinen ja hyödytön vielä, mutta toimii. Tiedot tallentuvat Firebaseen.
 <br />
@@ -16,12 +16,12 @@ CSS on toteutettu react-styled-components menetelmällä.
 <br />
 # Panostin tässä projektissa myös responsiivisuuteen, eli pitäisi skaalautua hyvin myös mobiililaitteilla.
 <br />
-<img src="/uploads/376c52d3153ac0ae01f3e3858f05f252/Näyttökuva_2022-03-19_134252.png"  >
-<img src="/uploads/fd9bd2e1bda840dcae5cccfc0ac135d8/Näyttökuva_2022-03-19_134333.png"  >
+<img src="/uploads/6cc55bfb5eded417689cf586ab8ffe71/Näyttökuva_2022-03-20_171419.png"  >
+<img src="/uploads/269566a3d81ea85092557c0a79346d73/Näyttökuva_2022-03-20_171444.png"  >
 
 **Kehitysideoita:**
 <br />
-Tavoitteena olisi vaihtaa localstorage tietokantaan, että jokaisella rekisteröidyllä käyttäjällä olisi henkilökohtainen portfolio mistä voi seurailla omia kolikoita.
+Tavoitteena olisi vaihtaa localstorage tietokantaan, että jokaisella rekisteröidyllä käyttäjällä olisi henkilökohtainen portfolio mistä voi seurata omia kolikoita.
 
 **Projektissa käytetyt rajapinnat:**
 <br />
