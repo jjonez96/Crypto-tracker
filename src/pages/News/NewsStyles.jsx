@@ -1,7 +1,8 @@
 import styled from "styled-components";
 
 export const Div = styled.div`
-  margin: 7%;
+  margin-top: 10%;
+
   text-align: center;
   color: #ecdbba;
   @media screen and (max-width: 960px) {
@@ -26,6 +27,7 @@ export const HR = styled.hr`
   box-shadow: 0 0 15px #ecdbba;
   position: relative;
   bottom: 20px;
+  width: 80%;
   @media screen and (max-width: 960px) {
     width: 60%;
   }
@@ -62,8 +64,8 @@ export const Img = styled.img`
   width: 500px;
   height: 300px;
   @media screen and (max-width: 960px) {
-    margin-left: -30px;
-    width: 400px;
+    object-fit: cover;
+    width: 250px;
     height: 250px;
   }
 `;

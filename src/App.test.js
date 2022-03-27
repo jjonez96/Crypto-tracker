@@ -3,7 +3,7 @@ import { render } from "@testing-library/react";
 import { configure, shallow } from "enzyme";
 import Adapter from "@wojtekmaj/enzyme-adapter-react-17";
 import NavBar from "./components/Navbar/NavBar";
-import NewsPage from "./pages/NewsPage";
+import NewsPage from "./pages/News/NewsPage";
 
 configure({ adapter: new Adapter() });
 

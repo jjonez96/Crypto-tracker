@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import CryptoTable from "./CryptoTable";
 import Addfav from "./buttons/Addfav";
 import { Store } from "react-notifications-component";
+import { db } from "../../config/firebase";
+import { doc, setDoc } from "firebase/firestore";
 
 const CryptoApi = () => {
   const [crypto, setCrypto] = useState([]);
@@ -43,6 +45,10 @@ const CryptoApi = () => {
   const addToPortfolio = (crypto) => {
     const newPortfolioList = [...portfolio, crypto];
     const unique = [...new Set(newPortfolioList)];
+    const saveToFirestore = (item) => {
+      setDoc(doc(db, "portfolio", item.id), item);
+    };
+    saveToFirestore(crypto);
     setPortfolio(unique);
     saveToLocalStorage(unique);
     Store.addNotification({

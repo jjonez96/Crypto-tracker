@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import CryptoTable from "./CryptoTable";
 import RemoveFav from "./buttons/RemoveFav";
 import { Store } from "react-notifications-component";
+import { db } from "../../config/firebase";
+import { doc, deleteDoc } from "firebase/firestore";
 
 const Portfolio = () => {
   const [portfolio, setPortfolio] = useState([]);
@@ -22,9 +24,13 @@ const Portfolio = () => {
 
   const removeFavouriteCrypto = (crypto) => {
     const newPortfolio = portfolio.filter((follow) => follow.id !== crypto.id);
-
+    const deleteFromFirestore = (item) => {
+      deleteDoc(doc(db, "portfolio", item.id));
+    };
+    deleteFromFirestore(crypto);
     setPortfolio(newPortfolio);
     saveToLocalStorage(newPortfolio);
+
     Store.addNotification({
       title: `${crypto.name} removed`,
       type: "danger",

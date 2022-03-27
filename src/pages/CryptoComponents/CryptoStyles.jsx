@@ -1,11 +1,15 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  margin: 7%;
+  margin-top: 10%;
+  margin-left: 1.7%;
+  margin-right: 2%;
   text-align: center;
   color: #ecdbba;
   @media screen and (max-width: 960px) {
-    margin-top: 20%;
+    margin-top: 25%;
+    margin-left: 4.8%;
+    margin-right: 2%;
   }
 `;
 
@@ -89,8 +93,6 @@ export const Green = styled.p`
   color: #11d811;
 `;
 export const Table = styled.table`
-  --x: 50%;
-  --y: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -111,7 +113,7 @@ export const Table = styled.table`
     left: 6px;
     width: 92%;
     margin-bottom: 4%;
-    height: 350px;
+    height: 330px;
   }
   &:hover {
     transform: scale(1.03);
@@ -121,7 +123,7 @@ export const Table = styled.table`
 export const Backtotop = styled.a`
   position: fixed;
   bottom: 10px;
-  right: 10px;
+  right: 12px;
   color: #ecdbba;
   background: transparent;
   cursor: pointer;
@@ -129,20 +131,20 @@ export const Backtotop = styled.a`
 
 export const Input = styled.input`
   font-family: inherit;
-  margin: 20px;
   font-size: 18px;
   vertical-align: baseline;
-  outline-offset: -2px;
   width: 95%;
   border: none;
   border-bottom: 1px solid #ecdbba;
   background-color: transparent;
-  padding: 10px 16px;
+  padding: 5px 20px;
   color: #ecdbba;
   @media screen and (max-width: 960px) {
-    width: 70%;
+    width: 80%;
+    margin-top: 50px;
+    margin-left: -15px;
     position: relative;
-    bottom: -40px;
+    top: 35px;
   }
   &::placeholder {
     color: #746c5c;
@@ -151,15 +153,5 @@ export const Input = styled.input`
   &:focus {
     outline: none !important;
     box-shadow: 0px 0.5px 0.1px 0px #ecdbba;
-  }
-`;
-export const Img = styled.img`
-  object-fit: cover;
-  width: 500px;
-  height: 300px;
-  @media screen and (max-width: 960px) {
-    margin-left: -30px;
-    width: 400px;
-    height: 250px;
   }
 `;

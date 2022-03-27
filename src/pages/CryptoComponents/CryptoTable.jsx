@@ -54,17 +54,17 @@ const CryptoTable = (props) => {
                 </tr>
                 <tr>
                   <td>
-                    <B>Price:</B> ${cryptos.current_price}
+                    <B>Price:</B> €{cryptos.current_price}
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <B> ATH Price:</B> ${cryptos.ath}
+                    <B> ATH Price:</B> €{cryptos.ath}
                   </td>
                 </tr>
                 <tr>
                   <td>
-                    <B> Market Cap:</B> ${cryptos.market_cap.toLocaleString()}
+                    <B> Market Cap:</B> €{cryptos.market_cap.toLocaleString()}
                   </td>
                 </tr>
                 <tr>

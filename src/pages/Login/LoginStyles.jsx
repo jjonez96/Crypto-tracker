@@ -19,7 +19,7 @@ export const Input = styled.input`
   vertical-align: baseline;
   outline-offset: -2px;
   width: 20%;
-  height: 50px;
+  height: 30px;
   border: none;
   border-bottom: 1px solid #ecdbba;
   background-color: transparent;
