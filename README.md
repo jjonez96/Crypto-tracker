@@ -7,13 +7,21 @@ https://coin-app-8164d.web.app
 <br />
 Tämän projektin avulla voit seurata haluamiasi kryptovaluuttoja lisäämällä niitä portfolioon ja voit etsiä niitä hakukentässä nimen, lyhenteen tai rankin perusteella.
 <br />
+Kryptovaluutan data siirtyy add painikkeella portfolioon, localstorageen ja firebasen firestoreen. Remove nappi taas poistaa sen tietyn datan.
+<br />
 Voit selata myös kryptovaluuttoihin liittyviä uutisia.
 <br />
 Kirjautumisjärjestelmä on todella alkeellinen ja hyödytön vielä, mutta toimii. Tiedot tallentuvat Firebaseen.
 <br />
 CSS on toteutettu react-styled-components menetelmällä.
-<img src="/uploads/9b05c122720262c2b2337f3698763e5d/Näyttökuva_2022-03-19_133128.png" >
-<br />
+
+<br/>
+<img src="/uploads/f8d19903f0a8db63acbbe74098cd8914/Näyttökuva_2022-03-27_132737.png" >
+
+# Data portfoliossa ja firestoressa.
+<img src="/uploads/492e4ec398014d13793aa71c9e7c185c/Näyttökuva_2022-03-27_130053.png" >
+<img src="/uploads/d7a794cb8fa5b432b2e857e0cce7241e/Näyttökuva_2022-03-27_130121.png" >
+
 # Panostin tässä projektissa myös responsiivisuuteen, eli pitäisi skaalautua hyvin myös mobiililaitteilla.
 <br />
 <img src="/uploads/6cc55bfb5eded417689cf586ab8ffe71/Näyttökuva_2022-03-20_171419.png"  >
