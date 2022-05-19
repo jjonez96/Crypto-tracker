@@ -16,7 +16,6 @@ import {
 } from "./CryptoStyles";
 
 const CryptoTable = (props) => {
-  const BtnState = props.btnState;
   return (
     <>
       <Container>
@@ -85,10 +84,8 @@ const CryptoTable = (props) => {
                 </tr>
                 <tr>
                   <td>
-                    <Button
-                      onClick={() => props.handleFavouritesClick(cryptos)}
-                    >
-                      <BtnState />
+                    <Button onClick={() => props.handlePortfolioClick(cryptos)}>
+                      {props.btnState}
                     </Button>
                   </td>
                 </tr>
