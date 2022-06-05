@@ -1,6 +1,7 @@
 import React from "react";
 import { H2, Div, HR, B, Img, Input } from "./NewsStyles";
-
+import { ReactNotifications } from "react-notifications-component";
+import "react-notifications-component/dist/theme.css";
 const NewsTable = (props) => {
   return (
     <>
@@ -10,6 +11,7 @@ const NewsTable = (props) => {
           placeholder="Search news..."
         ></Input>
         {props.isLoading && <p>Loading...</p>}
+        <ReactNotifications />
         {props.filterNews.map((news, i) => (
           <div className="center" key={i}>
             <H2>{news.title}</H2>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import NewsTable from "./NewsTable";
-
+import { db } from "../../config/firebase";
+import { doc, deleteDoc } from "firebase/firestore";
 import { Store } from "react-notifications-component";
 
 const Watchlist = () => {
@@ -21,12 +22,18 @@ const Watchlist = () => {
   };
 
   const removeFromWatchlist = (news) => {
-    const newWatchlist = watchlist.filter((follow) => follow.id !== news.id);
+    const newWatchlist = watchlist.filter(
+      (follow) => follow.title !== news.title
+    );
     setWatchlist(newWatchlist);
     saveToLocalStorage(newWatchlist);
+    const deleteFromFirestore = (item) => {
+      deleteDoc(doc(db, "watchlist", item.title));
+    };
+    deleteFromFirestore(news);
 
     Store.addNotification({
-      title: `${news.title} removed`,
+      title: `Article removed from watchlist`,
       type: "danger",
       container: "top-center",
       animationIn: ["animated", "fadeIn"],

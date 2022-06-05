@@ -2,6 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Store } from "react-notifications-component";
 import newsApi from "../../config/newsApi";
 import NewsTable from "./NewsTable";
+import { db } from "../../config/firebase";
+import { doc, setDoc } from "firebase/firestore";
+
 const NewsPage = () => {
   const [news, setNews] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
@@ -45,8 +48,12 @@ const NewsPage = () => {
     const unique = [...new Set(newNewsList)];
     setWatchlist(unique);
     saveToLocalStorage(unique);
+    const saveToFirestore = (item) => {
+      setDoc(doc(db, "watchlist", item.title), item);
+    };
+    saveToFirestore(news);
     Store.addNotification({
-      title: `added`,
+      title: `Article Added to watchlist`,
       type: "success",
       container: "top-center",
       animationIn: ["animated", "fadeIn"],
