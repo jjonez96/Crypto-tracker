@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import NewsTable from "./NewsTable";
+import WatchlistTable from "./WatchlistTable";
 import { db } from "../../config/firebase";
 import { doc, deleteDoc } from "firebase/firestore";
 import { Store } from "react-notifications-component";
 
 const Watchlist = () => {
   const [watchlist, setWatchlist] = useState([]);
-  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const newsWatchlist = JSON.parse(localStorage.getItem("watchlist"));
@@ -44,18 +43,11 @@ const Watchlist = () => {
     });
   };
 
-  const filterNews = watchlist.filter((news) => {
-    return news.title.toLowerCase().includes(search.toLowerCase());
-  });
-
   return (
     <div>
-      <NewsTable
-        filterNews={filterNews}
-        search={search}
-        setSearch={setSearch}
+      <WatchlistTable
+        watchlist={watchlist}
         handleWatchlistClick={removeFromWatchlist}
-        btnState="Remove"
       />
     </div>
   );

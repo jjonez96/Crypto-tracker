@@ -40,7 +40,7 @@ const NavBar = () => {
             <MobileIcon onClick={handleClick}>
               {click ? <CgClose size={35} /> : <CgMenuRight size={35} />}
             </MobileIcon>
-            <NavLogo to="/">
+            <NavLogo to="/Home">
               <FaBitcoin />
             </NavLogo>
             <NavMenu onClick={handleClick} click={click}>
@@ -50,18 +50,13 @@ const NavBar = () => {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/PortfolioPage">
-                  Portfolio <HR />
-                </NavLinks>
-              </NavItem>
-              <NavItem>
                 <NavLinks to="/NewsPage">
                   News <HR />
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/Watchlist">
-                  Watchlist <HR />
+                <NavLinks to="/Home">
+                  Home <HR />
                 </NavLinks>
               </NavItem>
               <NavItem>
