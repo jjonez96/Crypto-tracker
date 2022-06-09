@@ -1,7 +1,8 @@
 import React from "react";
-import { H2, Div, HR, B, Img, Input } from "./NewsStyles";
+import { H2, Div, HR, B, Img, Input, Button } from "./NewsStyles";
 import { ReactNotifications } from "react-notifications-component";
 import "react-notifications-component/dist/theme.css";
+
 const NewsTable = (props) => {
   return (
     <>
@@ -24,9 +25,10 @@ const NewsTable = (props) => {
               <B>Read more</B>
             </a>
             <div>
-              <button onClick={() => props.handleWatchlistClick(news)}>
-                add to watchlist
-              </button>
+              <Button onClick={() => props.handleWatchlistClick(news)}>
+                {props.btnState}
+              </Button>
+
               <br />
               <br />
               <HR />

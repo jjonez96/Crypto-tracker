@@ -55,6 +55,7 @@ const Watchlist = () => {
         search={search}
         setSearch={setSearch}
         handleWatchlistClick={removeFromWatchlist}
+        btnState="Remove"
       />
     </div>
   );

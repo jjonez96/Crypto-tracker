@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Store } from "react-notifications-component";
 import newsApi from "../../config/newsApi";
 import NewsTable from "./NewsTable";
+
 import { db } from "../../config/firebase";
 import { doc, setDoc } from "firebase/firestore";
 
@@ -76,6 +77,7 @@ const NewsPage = () => {
         search={search}
         setSearch={setSearch}
         handleWatchlistClick={addToWatchlist}
+        btnState="Add to watchlist"
       />
     </>
   );

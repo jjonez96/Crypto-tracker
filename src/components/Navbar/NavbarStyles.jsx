@@ -96,42 +96,36 @@ export const HR = styled.hr`
   }
 `;
 export const NavItem = styled.li`
-  height: 100px;
+  height: 30px;
+  display: flex;
+  font-size: 22px;
+  font-weight: 300;
+  padding: 2.4rem 2rem;
 
   @media screen and (max-width: 960px) {
     width: 100%;
   }
 `;
 export const NavLinks = styled(Link)`
-  color: #ecdbba;
-  display: flex;
-  align-items: center;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.4);
   text-decoration: none;
-  font-size: 22px;
-  font-weight: 300;
-  padding: 2.4rem 2rem;
+  color: ${({ active }) => (active ? "#000411" : "#ecdbba")};
   width: 100%;
+
   &:hover {
-    text-decoration: underline;
+    border-bottom: 1px solid #ecdbba;
   }
   &:focus {
-    text-decoration: underline;
+    border-bottom: 1px solid #ecdbba;
   }
+
   @media screen and (max-width: 960px) {
-    color: linear-gradient(
-      to right top,
-      #000a1a,
-      #413545,
-      #83636b,
-      #be9a8e,
-      #ecdbba
-    );
-    margin: -70px;
+    margin: -50px;
     margin-top: 40px;
     width: 100%;
-    display: table;
     &:hover {
-      text-decoration: underline;
+      border-bottom: none;
     }
   }
 `;

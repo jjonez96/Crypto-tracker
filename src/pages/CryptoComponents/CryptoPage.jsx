@@ -81,7 +81,7 @@ const CryptoApi = () => {
         search={search}
         setSearch={setSearch}
         handlePortfolioClick={addToPortfolio}
-        btnState="Add"
+        btnState="Add to portfolio"
       />
     </>
   );

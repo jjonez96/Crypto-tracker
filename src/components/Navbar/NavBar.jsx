@@ -55,13 +55,13 @@ const NavBar = () => {
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/Watchlist">
-                  Watchlist <HR />
+                <NavLinks to="/NewsPage">
+                  News <HR />
                 </NavLinks>
               </NavItem>
               <NavItem>
-                <NavLinks to="/NewsPage">
-                  News <HR />
+                <NavLinks to="/Watchlist">
+                  Watchlist <HR />
                 </NavLinks>
               </NavItem>
               <NavItem>
