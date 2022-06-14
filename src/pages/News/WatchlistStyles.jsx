@@ -1,0 +1,122 @@
+import styled from "styled-components";
+
+export const Div = styled.div`
+  margin-top: 10%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px solid #ecdbba;
+  background-color: black;
+  text-align: left;
+  color: #ecdbba;
+  @media screen and (max-width: 960px) {
+    margin-top: 20%;
+  }
+`;
+
+export const Button = styled.button`
+  height: 40px;
+  font-size: 1.2rem;
+  color: #ecdbba;
+  overflow: hidden;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 0 #ecdbba;
+  transition: ease-out 0.5s;
+  border: 1px solid #ecdbba;
+  border-radius: 4px;
+  z-index: 1;
+  cursor: pointer;
+  margin-top: 15px;
+  &:hover {
+    box-shadow: inset 0 0 0 50px #ecdbba;
+    color: black;
+  }
+  &:focus {
+    outline: none !important;
+    background-color: #ecdbba;
+    box-shadow: 0 0 10px #ecdbba;
+    color: black;
+  }
+`;
+
+export const H2 = styled.h2`
+  position: relative;
+  color: #ecdbba;
+  top: 10px;
+`;
+export const H1 = styled.h1`
+  color: #c84b31;
+  text-align: center;
+`;
+export const Heading = styled.h1`
+  color: #c84b31;
+  text-align: center;
+  padding-top: 10%;
+  position: relative;
+  top: 100px;
+`;
+
+export const B = styled.b`
+  color: #c84b31;
+`;
+export const HR = styled.hr`
+  line-height: 1em;
+  position: relative;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.1em;
+  opacity: 0.6;
+  &:before {
+    content: "";
+    background: linear-gradient(to right, transparent, #ecdbba, transparent);
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    height: 1px;
+  }
+`;
+
+export const Input = styled.input`
+  font-family: inherit;
+  margin: 20px;
+  font-size: 18px;
+  vertical-align: baseline;
+  outline-offset: -2px;
+  width: 95%;
+  border: none;
+  border-bottom: 1px solid #ecdbba;
+  background-color: transparent;
+  padding: 10px 16px;
+  color: #ecdbba;
+  @media screen and (max-width: 960px) {
+    width: 70%;
+    position: relative;
+    bottom: -40px;
+  }
+  &::placeholder {
+    color: #746c5c;
+  }
+
+  &:focus {
+    outline: none !important;
+    box-shadow: 0px 0.5px 0.1px 0px #ecdbba;
+  }
+`;
+export const Img = styled.img`
+  width: 250px;
+  height: 250px;
+  margin-bottom: -25%;
+  position: relative;
+  bottom: 370px;
+  left: 1230px;
+  @media screen and (max-width: 960px) {
+    width: 150px;
+    height: 150px;
+    margin-bottom: -20%;
+    position: relative;
+    bottom: 90px;
+    left: 200px;
+  }
+`;

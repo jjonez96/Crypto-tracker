@@ -1,31 +1,37 @@
 import React from "react";
-import { H2, Div, HR, B, Button } from "./NewsStyles";
+import { Heading, H1, H2, Div, HR, B, Button, Img } from "./WatchlistStyles";
 import { ReactNotifications } from "react-notifications-component";
 import "react-notifications-component/dist/theme.css";
-
+import news from "../Home/assets/news.png";
 const WatchlistTable = (props) => {
   return (
     <>
-      <Div>
-        <ReactNotifications />
-        {props.watchlist.map((news, i) => (
-          <div key={i}>
-            <H2>{news.title}</H2>
-            <a href={news.url}>
-              <B>Read more</B>
-            </a>
-            <div>
-              <Button onClick={() => props.handleWatchlistClick(news)}>
-                Remove
-              </Button>
+      <Heading>Watchlist</Heading>
+      <ReactNotifications />
+      {props.watchlist.length === 0 ? (
+        <Div>
+          <H1>No news in the watchlist</H1>
+        </Div>
+      ) : (
+        <Div>
+          {props.watchlist.map((news, i) => (
+            <div key={i}>
+              <H2>{news.title}</H2>
+              <a href={news.url}>
+                <B>Read more</B>
+              </a>
+              <div>
+                <Button onClick={() => props.handleWatchlistClick(news)}>
+                  Remove
+                </Button>
+              </div>
 
-              <br />
-              <br />
               <HR />
             </div>
-          </div>
-        ))}
-      </Div>
+          ))}
+          <Img src={news} alt="news" />
+        </Div>
+      )}
     </>
   );
 };
