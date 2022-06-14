@@ -1,19 +1,21 @@
 import React from "react";
-import { Heading, H1, H2, Div, HR, B, Button, Img } from "./WatchlistStyles";
+import { H1, H2, Div, HR, B, Button, Img, P } from "./WatchlistStyles";
+import news from "../Home/assets/news.png";
 import { ReactNotifications } from "react-notifications-component";
 import "react-notifications-component/dist/theme.css";
-import news from "../Home/assets/news.png";
 const WatchlistTable = (props) => {
   return (
     <>
-      <Heading>Watchlist</Heading>
+      <H1>Watchlist</H1>
+      <HR style={{ width: 150 }} />
       <ReactNotifications />
       {props.watchlist.length === 0 ? (
         <Div>
-          <H1>No news in the watchlist</H1>
+          <P>No news in the watchlist</P>
         </Div>
       ) : (
         <Div>
+          <Img src={news} alt="news" />
           {props.watchlist.map((news, i) => (
             <div key={i}>
               <H2>{news.title}</H2>
@@ -29,7 +31,6 @@ const WatchlistTable = (props) => {
               <HR />
             </div>
           ))}
-          <Img src={news} alt="news" />
         </Div>
       )}
     </>

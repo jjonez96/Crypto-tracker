@@ -21,13 +21,12 @@ const CryptoTable = (props) => {
       <ReactNotifications />
       <Container>
         <Input
-          value={props.value}
           onChange={(event) => props.setSearch(event.target.value)}
           placeholder="Search coins..."
         ></Input>
         {props.isLoading && <p>Loading...</p>}
-        {props.filterCryptos.map((cryptos) => (
-          <div key={cryptos.id}>
+        {props.filterCryptos.map((cryptos, i) => (
+          <div key={i}>
             <Table>
               <tbody>
                 <tr>
@@ -71,6 +70,7 @@ const CryptoTable = (props) => {
                     {cryptos.price_change_percentage_24h < 0 ? (
                       <Red>
                         <B>24H Change: </B>
+                        <br />
                         {cryptos.price_change_percentage_24h.toFixed(2)}%
                       </Red>
                     ) : (
@@ -84,8 +84,8 @@ const CryptoTable = (props) => {
                 </tr>
                 <tr>
                   <td>
-                    <Button onClick={() => props.handlePortfolioClick(cryptos)}>
-                      {props.btnState}
+                    <Button onClick={() => props.handleCryptoClick(cryptos)}>
+                      Add to portfolio
                     </Button>
                   </td>
                 </tr>

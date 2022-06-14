@@ -1,20 +1,22 @@
 import styled from "styled-components";
 
 export const Div = styled.div`
-  background-color: #000208;
   display: flex;
   justify-content: center;
 `;
 export const H1 = styled.h1`
   color: #c84b31;
-  position: relative;
-  bottom: 70px;
+
+  @media screen and (max-width: 960px) {
+    font-size: 26px;
+  }
 `;
 export const P = styled.p`
   color: #ecdbba;
-  font-size: 18px;
-  position: relative;
-  bottom: 50px;
+  font-size: 20px;
+  @media screen and (max-width: 960px) {
+    font-size: 17px;
+  }
 `;
 export const Img = styled.img`
   margin-top: 10%;
@@ -30,25 +32,21 @@ export const Img = styled.img`
 export const Container = styled.div`
   margin: 6%;
   padding: 5%;
-  width: 300px;
-  height: 150px;
-  background-color: #000208;
-  border: 1px solid #ecdbba;
+
+  font-size: 20px;
   position: relative;
-  top: 200px;
+  top: 150px;
   @media screen and (max-width: 960px) {
-    top: 80px;
+    top: 110px;
     right: 10px;
-    padding: 65px 15px 65px 15px;
+    margin: 0%;
 
     width: 100%;
-    margin-bottom: 25%;
     height: 330px;
   }
 `;
 export const HR = styled.hr`
   line-height: 1em;
-  position: relative;
   outline: 0;
   border: 0;
   color: black;
