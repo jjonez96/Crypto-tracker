@@ -128,9 +128,10 @@ export const Backtotop = styled.a`
   position: fixed;
   bottom: 10px;
   right: 12px;
-  color: #ecdbba;
+  color: #c84b31;
   background: transparent;
   cursor: pointer;
+  z-index: 100;
 `;
 
 export const Input = styled.input`

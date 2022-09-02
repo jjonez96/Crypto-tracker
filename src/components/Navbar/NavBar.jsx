@@ -45,6 +45,11 @@ const NavBar = () => {
             </NavLogo>
             <NavMenu onClick={handleClick} click={click}>
               <NavItem>
+                <NavLinks to="/Home">
+                  Home <HR />
+                </NavLinks>
+              </NavItem>
+              <NavItem>
                 <NavLinks to="/">
                   Coins <HR />
                 </NavLinks>
@@ -54,11 +59,7 @@ const NavBar = () => {
                   News <HR />
                 </NavLinks>
               </NavItem>
-              <NavItem>
-                <NavLinks to="/Home">
-                  Home <HR />
-                </NavLinks>
-              </NavItem>
+
               <NavItem>
                 <NavLinks to="/LoginPage">
                   Login <HR />

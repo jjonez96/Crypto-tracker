@@ -126,6 +126,7 @@ export const NavLinks = styled(Link)`
     width: 100%;
     &:hover {
       border-bottom: none;
+      color: #dab35a;
     }
   }
 `;

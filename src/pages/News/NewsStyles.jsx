@@ -43,6 +43,9 @@ export const H2 = styled.h2`
 export const B = styled.b`
   color: #c84b31;
   text-decoration: underline;
+  &:hover {
+    color: #c02000;
+  }
 `;
 export const HR = styled.hr`
   line-height: 1em;

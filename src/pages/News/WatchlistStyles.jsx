@@ -6,7 +6,6 @@ export const Div = styled.div`
   margin-right: 5%;
   border: 1px solid #ecdbba;
   background-color: #000208;
-  text-align: left;
   color: #ecdbba;
 `;
 
@@ -61,8 +60,12 @@ export const H1 = styled.h1`
 
 export const B = styled.b`
   color: #c84b31;
-  text-decoration: underline;
   margin-left: 2%;
+  text-decoration: underline;
+
+  &:hover {
+    color: #c02000;
+  }
 `;
 export const HR = styled.hr`
   line-height: 1em;

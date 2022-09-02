@@ -3,19 +3,19 @@ import Portfolio from "../CryptoComponents/PortfolioPage";
 import Watchlist from "../News/Watchlist";
 import Header from "./Header";
 import { HR } from "./HomeStyles";
-import { ReactNotifications } from "react-notifications-component";
-import "react-notifications-component/dist/theme.css";
 
 const Home = () => {
   return (
-    <div>
-      <ReactNotifications />
+    <>
       <Header />
       <HR />
       <Watchlist />
       <HR />
       <Portfolio />
-    </div>
+      <div className="shapedividers_com-1441" style={{ height: "200px" }}>
+        asd
+      </div>
+    </>
   );
 };
 

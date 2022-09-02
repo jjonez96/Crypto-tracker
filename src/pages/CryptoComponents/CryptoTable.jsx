@@ -14,19 +14,19 @@ import {
   Green,
   Input,
 } from "./CryptoStyles";
-
 const CryptoTable = (props) => {
   return (
     <>
-      <ReactNotifications />
       <Container>
         <Input
+          value={props.value}
           onChange={(event) => props.setSearch(event.target.value)}
           placeholder="Search coins..."
         ></Input>
+        <ReactNotifications />
         {props.isLoading && <p>Loading...</p>}
-        {props.filterCryptos.map((cryptos, i) => (
-          <div key={i}>
+        {props.filterCryptos.map((cryptos) => (
+          <div key={cryptos.id}>
             <Table>
               <tbody>
                 <tr>
@@ -70,13 +70,12 @@ const CryptoTable = (props) => {
                     {cryptos.price_change_percentage_24h < 0 ? (
                       <Red>
                         <B>24H Change: </B>
-                        <br />
                         {cryptos.price_change_percentage_24h.toFixed(2)}%
                       </Red>
                     ) : (
                       <Green>
                         <B>24H Change: </B>
-                        {cryptos.price_change_percentage_24h.toFixed(2)}%
+                        {cryptos.price_change_percentage_24h}%
                       </Green>
                     )}
                     <HR />
@@ -85,7 +84,7 @@ const CryptoTable = (props) => {
                 <tr>
                   <td>
                     <Button onClick={() => props.handleCryptoClick(cryptos)}>
-                      Add to portfolio
+                      Add
                     </Button>
                   </td>
                 </tr>

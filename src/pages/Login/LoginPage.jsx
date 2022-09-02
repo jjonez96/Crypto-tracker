@@ -6,7 +6,7 @@ import {
   signInWithEmailAndPassword,
   signOut,
 } from "firebase/auth";
-import { Div, Input, Button, HR } from "./LoginStyles";
+import { Div, Input, Button, HR, P } from "./LoginStyles";
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -48,7 +48,7 @@ function LoginPage() {
         <p>logged in as:</p>
         {user?.email}
         <form>
-          <p>Email:</p>
+          <P>Email:</P>
           <Input
             type="text"
             value={email}
@@ -57,7 +57,7 @@ function LoginPage() {
               setEmail(e.target.value);
             }}
           />
-          <p>Password:</p>
+          <P>Password:</P>
           <Input
             type="password"
             value={password}
@@ -69,10 +69,10 @@ function LoginPage() {
           <Button onClick={login}>Sign In</Button>
           <br />
           <br />
-          <p>
+          <P>
             No account? <br />
             Click Create Account instead of Sign In.
-          </p>
+          </P>
           <Button onClick={register}>Create Account</Button>
           <br />
           <br />

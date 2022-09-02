@@ -3,27 +3,40 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 15px;
   font-size: 18px;
   color: #ecdbba;
   background-color: #000208;
   border: 1px solid #ecdbba;
-  margin-top: 6%;
   margin-left: 5%;
   margin-right: 5%;
+  overflow-x: auto;
 `;
 export const Thead = styled.thead`
   background-color: rgb(44, 44, 44);
   color: white;
   text-align: center;
 `;
+export const P = styled.p`
+  text-align: center;
+  margin-left: 2%;
 
+  font-size: 1.2rem;
+  color: #ecdbba;
+`;
+export const Div = styled.div`
+  margin-top: 2%;
+  margin-left: 5%;
+  margin-right: 5%;
+  border: 1px solid #ecdbba;
+  background-color: #000208;
+  text-align: left;
+  color: #ecdbba;
+`;
 export const Button = styled.button`
   height: 35px;
   font-size: 1.2rem;
   color: #ecdbba;
-  float: right;
   overflow: hidden;
   background-color: transparent;
   box-shadow: inset 0 0 0 0 #ecdbba;
@@ -44,14 +57,16 @@ export const Button = styled.button`
   }
 `;
 export const H1 = styled.h1`
-  text-decoration: underline;
+  color: #c84b31;
   text-align: center;
-  color: #ecdbba;
+  padding-top: 10%;
+  font-size: 2rem;
+  position: relative;
+  bottom: 10px;
 `;
 
 export const H2 = styled.h2`
   color: #ecdbba;
-  float: left;
 `;
 
 export const B = styled.b`
@@ -88,17 +103,21 @@ export const Symbol = styled.b`
 
 export const Red = styled.p`
   color: #ff3a3a;
-  float: right;
 `;
 export const Green = styled.p`
   color: #11d811;
-  float: right;
 `;
 export const Table = styled.table`
-  width: 1400px;
-  border-collapse: separate;
+  width: 100%;
+  border-collapse: collapse;
 `;
 
+export const Tr = styled.tr`
+  text-align: center;
+`;
+export const Td = styled.td`
+  padding-left: 45px;
+`;
 export const Backtotop = styled.a`
   position: fixed;
   bottom: 10px;

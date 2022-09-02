@@ -7,7 +7,7 @@ const WatchlistTable = (props) => {
   return (
     <>
       <H1>Watchlist</H1>
-      <HR style={{ width: 150 }} />
+      <HR style={{ width: "100%" }} />
       <ReactNotifications />
       {props.watchlist.length === 0 ? (
         <Div>

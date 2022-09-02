@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Div = styled.div`
-  margin-top: 10%;
+  margin-top: 250px;
   justify-content: center;
   text-align: center;
   align-items: center;
@@ -9,7 +9,7 @@ export const Div = styled.div`
   color: #ecdbba;
   @media screen and (max-width: 960px) {
     position: relative;
-    top: 60px;
+    top: 50%;
   }
 `;
 
@@ -44,35 +44,48 @@ export const Input = styled.input`
 `;
 
 export const Button = styled.button`
-  font-size: 20px;
+  height: 40px;
+  font-size: 1.2rem;
   color: #ecdbba;
   overflow: hidden;
-  background-image: linear-gradient(
-    70deg,
-    rgba(236, 219, 186, 1) 32%,
-    rgba(255, 64, 64, 1) 100%
-  );
-  -webkit-background-clip: text;
-  color: transparent;
+  background-color: transparent;
+  box-shadow: inset 0 0 0 0 #ecdbba;
+  transition: ease-out 0.5s;
   border: 1px solid #ecdbba;
-  border-radius: 7px;
+  border-radius: 4px;
+  z-index: 1;
   cursor: pointer;
-
+  margin-top: 15px;
   &:hover {
-    transition-duration: 0.4s;
-    box-shadow: 0 0 5px #ecdbba;
+    box-shadow: inset 0 0 0 50px #ecdbba;
+    color: black;
   }
   &:focus {
     outline: none !important;
-    border: 1px solid #ecdbba;
-    box-shadow: 0 0 5px #ecdbba;
+    background-color: #ecdbba;
+    box-shadow: 0 0 10px #ecdbba;
+    color: black;
   }
 `;
 export const HR = styled.hr`
-  border: none;
-  height: 0.5px;
-  background-color: #ecdbba;
-  box-shadow: 0 0 15px #ecdbba;
+  line-height: 1em;
   position: relative;
-  bottom: 20px;
+  outline: 0;
+  border: 0;
+  color: black;
+  text-align: center;
+  height: 1.1em;
+  opacity: 0.6;
+  &:before {
+    content: "";
+    background: linear-gradient(to right, transparent, #ecdbba, transparent);
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 1px;
+  }
+`;
+
+export const P = styled.p`
+  color: #c84b31;
 `;
