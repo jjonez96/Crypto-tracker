@@ -12,9 +12,7 @@ const Home = () => {
       <Watchlist />
       <HR />
       <Portfolio />
-      <div className="shapedividers_com-1441" style={{ height: "200px" }}>
-        asd
-      </div>
+      <div className="shapedividers_com-8266" style={{ height: "550px" }}></div>
     </>
   );
 };

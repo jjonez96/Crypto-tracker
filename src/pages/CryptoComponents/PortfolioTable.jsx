@@ -1,23 +1,21 @@
-import { padding } from "@mui/system";
 import React from "react";
-import "react-notifications-component/dist/theme.css";
+import { FaTimes } from "react-icons/fa";
 
 import {
   Table,
   Container,
-  H2,
-  B,
   Button,
-  Symbol,
   Red,
   Tr,
   Td,
+  Th,
   Green,
-  Thead,
+  Img,
   H1,
   HR,
   P,
   Div,
+  Imgdiv,
 } from "./PortfolioStyles";
 
 const PortfolioTable = (props) => {
@@ -32,58 +30,54 @@ const PortfolioTable = (props) => {
       ) : (
         <Container>
           <Table>
-            <Thead>
+            <thead>
               <tr>
-                <td style={{ paddingRight: "20px" }}>Rank</td>
-                <td style={{ float: "left" }}>Name</td>
-                <td>Symbol</td>
-                <td>Price</td>
-                <td style={{ float: "right" }}>ATH</td>
-                <td style={{ paddingRight: "20px" }}>Volume(24hrs)</td>
+                <Th>Rank</Th>
+                <Th>Name</Th>
+                <Th>Symbol</Th>
+                <Th>Price</Th>
+                <Th>ATH</Th>
+                <Th>Volume(24hrs)</Th>
               </tr>
-            </Thead>
-          </Table>
-          <div>
-            <Table>
-              <tbody>
-                {props.portfolio.map((cryptos, id) => {
-                  return (
-                    <Tr key={id}>
-                      <Td>{cryptos.market_cap_rank}</Td>
+            </thead>
 
-                      <td>
-                        <img src={cryptos.image} alt="logo" width="30px" />
-                      </td>
-                      <td style={{ float: "left" }}>
-                        <p>{cryptos.name}</p>
-                      </td>
-                      <Td>{cryptos.symbol}</Td>
-                      <Td>€{cryptos.current_price.toFixed(2)}</Td>
-                      <Td>€{cryptos.ath}</Td>
-                      <Td>
-                        {cryptos.price_change_percentage_24h < 0 ? (
-                          <Red>
-                            {cryptos.price_change_percentage_24h.toFixed(2)}%
-                          </Red>
-                        ) : (
-                          <Green>
-                            {cryptos.price_change_percentage_24h.toFixed(2)}%
-                          </Green>
-                        )}
-                      </Td>
-                      <td>
-                        <Button
-                          onClick={() => props.handlePortfolioClick(cryptos)}
-                        >
-                          Remove
-                        </Button>
-                      </td>
-                    </Tr>
-                  );
-                })}
-              </tbody>
-            </Table>
-          </div>
+            {props.portfolio.map((cryptos, id) => {
+              return (
+                <tbody key={id}>
+                  <Tr>
+                    <Td>{cryptos.market_cap_rank}</Td>
+                    <Td>
+                      <Imgdiv>
+                        <Img src={cryptos.image} alt="logo" width="25px" />
+                        {cryptos.name}
+                      </Imgdiv>
+                    </Td>
+                    <Td>{cryptos.symbol}</Td>
+                    <Td>€{cryptos.current_price.toFixed(2)}</Td>
+                    <Td>€{cryptos.ath}</Td>
+                    <Td>
+                      {cryptos.price_change_percentage_24h < 0 ? (
+                        <Red>
+                          {cryptos.price_change_percentage_24h.toFixed(2)}%
+                        </Red>
+                      ) : (
+                        <Green>
+                          {cryptos.price_change_percentage_24h.toFixed(2)}%
+                        </Green>
+                      )}
+                    </Td>
+                    <td>
+                      <Button
+                        onClick={() => props.handlePortfolioClick(cryptos)}
+                      >
+                        <FaTimes size={16} style={{ paddingTop: "3px" }} />
+                      </Button>
+                    </td>
+                  </Tr>
+                </tbody>
+              );
+            })}
+          </Table>
         </Container>
       )}
     </>

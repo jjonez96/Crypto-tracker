@@ -1,16 +1,11 @@
 import styled from "styled-components";
 
 export const Div = styled.div`
-  margin-top: 250px;
   justify-content: center;
   text-align: center;
   align-items: center;
-
+  margin-top: 200px;
   color: #ecdbba;
-  @media screen and (max-width: 960px) {
-    position: relative;
-    top: 50%;
-  }
 `;
 
 export const Input = styled.input`

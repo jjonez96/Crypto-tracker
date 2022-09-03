@@ -1,6 +1,8 @@
 import React from "react";
 import invest from "./assets/invest.png";
 import { Img, Div, H1, Container, P } from "./HomeStyles";
+import { ReactNotifications } from "react-notifications-component";
+import "react-notifications-component/dist/theme.css";
 const Header = () => {
   return (
     <Div>
@@ -13,6 +15,7 @@ const Header = () => {
           will be added to this homepage.
         </P>
       </Container>
+      <ReactNotifications />
     </Div>
   );
 };

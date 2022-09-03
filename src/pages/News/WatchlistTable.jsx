@@ -1,14 +1,12 @@
 import React from "react";
 import { H1, H2, Div, HR, B, Button, Img, P } from "./WatchlistStyles";
 import news from "../Home/assets/news.png";
-import { ReactNotifications } from "react-notifications-component";
-import "react-notifications-component/dist/theme.css";
+
 const WatchlistTable = (props) => {
   return (
-    <>
+    <div style={{ marginTop: "10%" }}>
       <H1>Watchlist</H1>
       <HR style={{ width: "100%" }} />
-      <ReactNotifications />
       {props.watchlist.length === 0 ? (
         <Div>
           <P>No news in the watchlist</P>
@@ -27,13 +25,12 @@ const WatchlistTable = (props) => {
                   Remove
                 </Button>
               </div>
-
               <HR />
             </div>
           ))}
         </Div>
       )}
-    </>
+    </div>
   );
 };
 

@@ -13,24 +13,24 @@ export const Button = styled.button`
   height: 40px;
   margin-left: 2%;
   font-size: 1.2rem;
-  color: #ecdbba;
+  color: #ff3a3a;
   overflow: hidden;
   background-color: transparent;
-  box-shadow: inset 0 0 0 0 #ecdbba;
+  box-shadow: inset 0 0 0 0 #ff3a3a;
   transition: ease-out 0.5s;
-  border: 1px solid #ecdbba;
+  border: 1px solid #ff3a3a;
   border-radius: 4px;
   z-index: 1;
   cursor: pointer;
   margin-top: 15px;
   &:hover {
-    box-shadow: inset 0 0 0 50px #ecdbba;
+    box-shadow: inset 0 0 0 50px #ff3a3a;
     color: black;
   }
   &:focus {
     outline: none !important;
-    background-color: #ecdbba;
-    box-shadow: 0 0 10px #ecdbba;
+    background-color: #ff3a3a;
+    box-shadow: 0 0 10px #ff3a3a;
     color: black;
   }
 `;

@@ -12,24 +12,24 @@ export const Div = styled.div`
 export const Button = styled.button`
   height: 40px;
   font-size: 1.2rem;
-  color: #ecdbba;
+  color: #11d811;
   overflow: hidden;
   background-color: transparent;
-  box-shadow: inset 0 0 0 0 #ecdbba;
+  box-shadow: inset 0 0 0 0 #11d811;
   transition: ease-out 0.5s;
-  border: 1px solid #ecdbba;
+  border: 1px solid #11d811;
   border-radius: 4px;
   z-index: 1;
   cursor: pointer;
   margin-top: 15px;
   &:hover {
-    box-shadow: inset 0 0 0 50px #ecdbba;
+    box-shadow: inset 0 0 0 50px #11d811;
     color: black;
   }
   &:focus {
     outline: none !important;
-    background-color: #ecdbba;
-    box-shadow: 0 0 10px #ecdbba;
+    background-color: #11d811;
+    box-shadow: 0 0 10px #11d811;
     color: black;
   }
 `;

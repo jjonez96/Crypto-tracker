@@ -9,11 +9,7 @@ const Watchlist = () => {
 
   useEffect(() => {
     const newsWatchlist = JSON.parse(localStorage.getItem("watchlist"));
-    if (newsWatchlist === null) {
-      alert("No coins in portfolio. Add some.");
-    } else {
-      setWatchlist(newsWatchlist);
-    }
+    setWatchlist(newsWatchlist);
   }, []);
 
   const saveToLocalStorage = (items) => {

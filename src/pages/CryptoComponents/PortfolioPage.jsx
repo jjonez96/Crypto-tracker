@@ -8,11 +8,7 @@ const Portfolio = () => {
 
   useEffect(() => {
     const coinPortfolio = JSON.parse(localStorage.getItem("portfolio"));
-    if (coinPortfolio === null) {
-      alert("No coins in portfolio. Add some.");
-    } else {
-      setPortfolio(coinPortfolio);
-    }
+    setPortfolio(coinPortfolio);
   }, []);
 
   const saveToLocalStorage = (items) => {
