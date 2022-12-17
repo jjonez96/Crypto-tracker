@@ -9,7 +9,9 @@ const Watchlist = () => {
 
   useEffect(() => {
     const newsWatchlist = JSON.parse(localStorage.getItem("watchlist"));
-    setWatchlist(newsWatchlist);
+    if (newsWatchlist) {
+      setWatchlist(newsWatchlist);
+    }
   }, []);
 
   const saveToLocalStorage = (items) => {

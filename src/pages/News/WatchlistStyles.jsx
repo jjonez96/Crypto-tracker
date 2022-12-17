@@ -11,7 +11,7 @@ export const Div = styled.div`
 
 export const Button = styled.button`
   height: 40px;
-  margin-left: 2%;
+  margin-left: 4%;
   font-size: 1.2rem;
   color: #ff3a3a;
   overflow: hidden;
@@ -37,15 +37,21 @@ export const Button = styled.button`
 
 export const H2 = styled.h2`
   position: relative;
-  margin-left: 2%;
+  margin-left: 4%;
   color: #ecdbba;
   top: 10px;
 `;
 export const P = styled.p`
   text-align: center;
   margin-left: 2%;
-
   font-size: 1.2rem;
+  color: #ecdbba;
+`;
+
+export const Desc = styled.p`
+  position: relative;
+  margin-left: 4%;
+  margin-right: 2%;
   color: #ecdbba;
 `;
 
@@ -60,9 +66,8 @@ export const H1 = styled.h1`
 
 export const B = styled.b`
   color: #c84b31;
-  margin-left: 2%;
+  margin-left: 4%;
   text-decoration: underline;
-
   &:hover {
     color: #c02000;
   }
@@ -91,7 +96,6 @@ export const Img = styled.img`
   width: 200px;
   height: 200px;
   margin-bottom: -20%;
-
   float: right;
   @media screen and (max-width: 960px) {
     width: 150px;

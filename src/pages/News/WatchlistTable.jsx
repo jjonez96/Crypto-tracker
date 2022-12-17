@@ -1,10 +1,10 @@
 import React from "react";
-import { H1, H2, Div, HR, B, Button, Img, P } from "./WatchlistStyles";
+import { H1, H2, Div, HR, B, Button, Img, P, Desc } from "./WatchlistStyles";
 import news from "../Home/assets/news.png";
 
 const WatchlistTable = (props) => {
   return (
-    <div style={{ marginTop: "10%" }}>
+    <div>
       <H1>Watchlist</H1>
       <HR style={{ width: "100%" }} />
       {props.watchlist.length === 0 ? (
@@ -17,6 +17,7 @@ const WatchlistTable = (props) => {
           {props.watchlist.map((news, i) => (
             <div key={i}>
               <H2>{news.title}</H2>
+              <Desc>{news.description}</Desc>
               <a href={news.url}>
                 <B>Read more</B>
               </a>

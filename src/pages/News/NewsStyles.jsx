@@ -38,8 +38,14 @@ export const H2 = styled.h2`
   position: relative;
   color: #ecdbba;
   top: 10px;
+  padding-left: 5%;
+  padding-right: 5%;
 `;
-
+export const Desc = styled.p`
+  color: #ecdbba;
+  padding-left: 15%;
+  padding-right: 15%;
+`;
 export const B = styled.b`
   color: #c84b31;
   text-decoration: underline;

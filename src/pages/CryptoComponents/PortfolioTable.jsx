@@ -20,7 +20,7 @@ import {
 
 const PortfolioTable = (props) => {
   return (
-    <>
+    <div>
       <H1>Portfolio</H1>
       <HR style={{ width: "100%" }} />
       {props.portfolio.length === 0 ? (
@@ -80,7 +80,7 @@ const PortfolioTable = (props) => {
           </Table>
         </Container>
       )}
-    </>
+    </div>
   );
 };
 

@@ -14,11 +14,11 @@ const NewsPage = () => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://crypto-news-live3.p.rapidapi.com/news", {
+    fetch("https://crypto-news16.p.rapidapi.com/news/top/50", {
       method: "GET",
       headers: {
-        "x-rapidapi-host": "crypto-news-live3.p.rapidapi.com",
-        "x-rapidapi-key": newsApi,
+        "X-RapidAPI-Key": newsApi,
+        "X-RapidAPI-Host": "crypto-news16.p.rapidapi.com",
       },
     })
       .then((response) => {
@@ -44,6 +44,7 @@ const NewsPage = () => {
   const saveToLocalStorage = (items) => {
     localStorage.setItem("watchlist", JSON.stringify(items));
   };
+
   const addToWatchlist = (news) => {
     const newNewsList = [...watchlist, news];
     const unique = [...new Set(newNewsList)];
@@ -52,6 +53,7 @@ const NewsPage = () => {
     const saveToFirestore = (item) => {
       setDoc(doc(db, "watchlist", item.title), item);
     };
+
     saveToFirestore(news);
     Store.addNotification({
       title: `Article Added to watchlist`,
