@@ -25,4 +25,4 @@ CSS on toteutettu react-styled-components menetelmällä.
 **Projektissa käytetyt rajapinnat:**
 <br />
 News-API: crypto-news-live3.p.rapidapi.com<br />
-Crypto-API: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=300&page=1&sparkline=false (avaimeton API)
+Coingecko-API: https://api.coingecko.com/api/v3/coins/markets?vs_currency=eur&order=market_cap_desc&per_page=300&page=1&sparkline=false (avaimeton API)
