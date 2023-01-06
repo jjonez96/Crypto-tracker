@@ -26,8 +26,9 @@ User login is also made with Firebase and the user data is stored to database.
 - Concepts of React-Router (Setup routing between components).
 - How components work and how to pass props to them.
 - Basic understanding how useState and useEffect hooks work.
-- Using fetch in React and how to display that data.
+- Using fetch in React and how to display that data and send it to other component. .
 - Setting up folder structure.
+- Memoryleak issue fixes. 
 - Basic unit tests for the components.
 - How import and export works in React (components, files, images, etc.).
 - Using basic Git commands (commit, push and pull).
